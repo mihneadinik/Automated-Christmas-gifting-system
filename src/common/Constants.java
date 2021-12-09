@@ -32,6 +32,18 @@ public final class Constants {
     public static final Object NEWGIFTS = "newGifts";
     public static final Object NEWCHILDREN = "newChildren";
     public static final Object CHILDRENUPDATES = "childrenUpdates";
+    public static final String BABY = "baby";
+    public static final String KID = "kid";
+    public static final String TEEN = "teen";
+    public static final String YOUNGADULT = "young adult";
+    public static final String AVERAGESCORE = "averageScore";
+    public static final String NICESCOREHISTORY = "niceScoreHistory";
+    public static final String ASSIGNEDBUDGET = "assignedBudget";
+    public static final String RECEIVEDGIFTS = "receivedGifts";
+    public static final String ANNUALCHILDREN = "annualChildren";
+    public static final Double BABYAVERAGESCORE = 10.0;
+    public static final int ADULTAGE = 18;
+
 
     private Constants() {
         //constructor for checkstyle

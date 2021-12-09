@@ -7,19 +7,19 @@ import java.util.List;
 
 public class ChildInputData {
     private Integer id;
-    private String firstname;
     private String lastname;
+    private String firstname;
     private Integer age;
     private Cities city;
     private Double niceScore;
     private List<Category> giftsPreference;
 
-    public ChildInputData(final Integer id, final String firstname, final String lastname,
+    public ChildInputData(final Integer id, final String lastname, final String firstname,
                           final Integer age, final Cities city, final Double niceScore,
                           final List<Category> giftsPreference) {
         this.id = id;
-        this.firstname = firstname;
         this.lastname = lastname;
+        this.firstname = firstname;
         this.age = age;
         this.city = city;
         this.niceScore = niceScore;

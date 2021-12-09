@@ -2,9 +2,12 @@ package main;
 
 import checker.Checker;
 import common.Constants;
+import databases.Database;
 import fileio.Input;
 import fileio.InputLoader;
+import fileio.Writer;
 import org.json.simple.JSONArray;
+import simulation.SimulateYears;
 
 import java.io.File;
 import java.io.IOException;
@@ -64,22 +67,26 @@ public final class Main {
                               final String filePath2) throws IOException {
         InputLoader inputLoader = new InputLoader(filePath1);
         Input input = inputLoader.readData();
-//
-//        Writer fileWriter = new Writer(filePath2);
-//        JSONArray arrayResult = new JSONArray();
-//
-//        // introduce the objects in an empty database
-//        Database.getInstance().clearDatabase();
-//        Database.getInstance().setMoviesList(input.getMovies());
-//        Database.getInstance().setSerialsList(input.getSerials());
-//        Database.getInstance().setActors(input.getActors());
-//        Database.getInstance().setUsers(input.getUsers());
+
+        Writer fileWriter = new Writer(filePath2);
+        JSONArray arrayResult = new JSONArray();
+
+        // introduce the objects in an empty database
+        Database.getInstance().clearDatabase();
+        Database.getInstance().setNumberOfYears(input.getNumberOfYears());
+        Database.getInstance().setSantaBudget(input.getSantaBudget());
+        Database.getInstance().setChildrenList(input.getChildData());
+        Database.getInstance().setGiftsList(input.getGiftsData());
+        Database.getInstance().setAnnualChangeList(input.getAnnualChangesData());
 //
 //        // Initialise the object that solves the inputs
 //        ActionSolver solver = new ActionSolver(fileWriter, arrayResult, input.getCommands());
 //        solver.solveActions();
+        SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(), arrayResult, fileWriter);
+        simulation.firstYear();
+        simulation.nextYears();
 //
-//        fileWriter.closeJSON(arrayResult);
+        fileWriter.closeJSON(arrayResult);
 
     }
 }
