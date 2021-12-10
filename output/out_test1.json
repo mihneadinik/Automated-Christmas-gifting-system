@@ -1,1 +1,53 @@
-{"annualChildren":[{"children":[{"lastName":"Cantemir","firstName":"Maria","niceScoreHistory":[10.0],"city":"Timisoara","giftsPreferences":["Board Games","Clothes","Books"],"assignedBudget":326.0,"id":0,"receivedGifts":[{"price":10.0,"category":"Board Games","productName":"Uno"},{"price":45.0,"category":"Clothes","productName":"Dress"},{"price":35.0,"category":"Books","productName":"Harry Potter"}],"age":4,"averageScore":10.0}]},{"children":[{"lastName":"Cantemir","firstName":"Maria","niceScoreHistory":[10.0],"city":"Timisoara","giftsPreferences":["Board Games","Clothes","Books"],"assignedBudget":398.0,"id":0,"receivedGifts":[{"price":10.0,"category":"Board Games","productName":"Uno"},{"price":45.0,"category":"Clothes","productName":"Dress"},{"price":35.0,"category":"Books","productName":"Harry Potter"}],"age":5,"averageScore":10.0}]}]}
+{
+  "annualChildren" : [ {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Cantemir",
+      "firstName" : "Maria",
+      "city" : "Timisoara",
+      "age" : 4,
+      "giftsPreferences" : [ "Board Games", "Clothes", "Books" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 10.0 ],
+      "assignedBudget" : 326.0,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Cantemir",
+      "firstName" : "Maria",
+      "city" : "Timisoara",
+      "age" : 5,
+      "giftsPreferences" : [ "Board Games", "Clothes", "Books" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 10.0 ],
+      "assignedBudget" : 398.0,
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Harry Potter",
+        "price" : 35.0,
+        "category" : "Books"
+      } ]
+    } ]
+  } ]
+}

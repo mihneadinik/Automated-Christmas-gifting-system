@@ -4,6 +4,7 @@ public final class Constants {
     public static final String TESTS_PATH = "tests/";
     public static final String OUTPUT_PATH = "output";
     public static final String OUT_PATH = "output/out_";
+    public static final String DA = "output/out_test";
     public static final String REF_PATH = "ref/ref_test";
     public static final String FILE_EXTENSION = ".json";
     public static final Integer SMALL_TEST_POINTS = 2;
@@ -43,6 +44,8 @@ public final class Constants {
     public static final String ANNUALCHILDREN = "annualChildren";
     public static final Double BABYAVERAGESCORE = 10.0;
     public static final int ADULTAGE = 18;
+    public static final int BABYAGE = 5;
+    public static final int KIDAGE = 12;
 
 
     private Constants() {

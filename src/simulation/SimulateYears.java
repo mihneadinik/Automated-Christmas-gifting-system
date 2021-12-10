@@ -2,6 +2,7 @@ package simulation;
 
 import common.Constants;
 import databases.Database;
+import fileio.OutputModel;
 import fileio.Writer;
 import objects.AnnualChange;
 import objects.Child;
@@ -9,6 +10,7 @@ import objects.ChildrenUpdate;
 import objects.Gift;
 import observers.SantaClausUpdate;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,10 +19,10 @@ import java.util.List;
 public final class SimulateYears{
     private YearData currYear; // observatorul meu
     private List<AnnualChange> changes;
-    private JSONArray arrayResult;
+    private List<JSONObject> arrayResult;
     private Writer fileWriter;
 
-    public SimulateYears(final List<AnnualChange> changesList, final JSONArray arrayResult, final Writer fileWriter) {
+    public SimulateYears(final List<AnnualChange> changesList, final List<JSONObject> arrayResult, final Writer fileWriter) {
         this.changes = changesList;
         this.currYear = null;
         this.arrayResult = arrayResult;
@@ -45,9 +47,9 @@ public final class SimulateYears{
      * function that computes the work-flow of next years
      */
     public void nextYears() throws IOException {
-        for (int i = 1; i <= this.changes.size(); i++) {
+        for (int i = 0; i < Database.getInstance().getNumberOfYears(); i++) {
             // iau annual change ul curent si aplic actualizarile
-            AnnualChange currChange = this.changes.get(i - 1);
+            AnnualChange currChange = this.changes.get(i);
             eachYearUpdate(currChange);
             SolveYear.giveGifts(currYear, arrayResult, fileWriter);
         }
@@ -71,6 +73,7 @@ public final class SimulateYears{
     private void updateChildrenAge() {
         for (Child child : Database.getInstance().getChildrenList()) {
             child.updateAge();
+            child.computeAverageScore();
         }
     }
 
