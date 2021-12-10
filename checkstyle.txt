@@ -148,7 +148,7 @@ Starting audit...
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\fileio\Writer.java:62:5: Missing a Javadoc comment. [MissingJavadocMethod]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\main\Main.java:8:8: Unused import - fileio.OutputModel. [UnusedImports]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\main\Main.java:10:8: Unused import - org.json.simple.JSONArray. [UnusedImports]
-[ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\main\Main.java:87: Line is longer than 100 characters (found 124). [LineLength]
+[ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\main\Main.java:86: Line is longer than 100 characters (found 124). [LineLength]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\objects\AnnualChange.java:3:8: Unused import - fileio.ChildInputData. [UnusedImports]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\objects\AnnualChange.java:4:8: Unused import - fileio.ChildrenUpdateInputData. [UnusedImports]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\objects\AnnualChange.java:5:8: Unused import - fileio.GiftsInputData. [UnusedImports]
@@ -283,7 +283,6 @@ Starting audit...
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\strategies\StrategyFactory.java:30: Line is longer than 100 characters (found 104). [LineLength]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\strategies\TeenStrategy.java:3:8: Unused import - common.Constants. [UnusedImports]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\strategies\TeenStrategy.java:6:64: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\strategies\TeenStrategy.java:19: Line is longer than 100 characters (found 121). [LineLength]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\utils\Utils.java:13:8: Unused import - org.json.simple.JSONObject. [UnusedImports]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\utils\Utils.java:15:17: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\utils\Utils.java:18:21: '{' is not followed by whitespace. [WhitespaceAround]
@@ -303,4 +302,4 @@ Starting audit...
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\utils\Utils.java:144:5: Missing a Javadoc comment. [MissingJavadocMethod]
 [ERROR] C:\Users\mihne\Documents\GitHub\ProiectPOO\.\src\utils\Utils.java:152:5: Missing a Javadoc comment. [MissingJavadocMethod]
 Audit done.
-Checkstyle ends with 303 errors.
+Checkstyle ends with 302 errors.
