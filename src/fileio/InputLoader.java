@@ -49,8 +49,6 @@ public class InputLoader {
             // un obiect pt schimbari
             JSONArray jsonAnnualChanges = (JSONArray) jsonObject.get(Constants.ANNUALCHANGES);
 
-            System.out.println(inputPath);
-
             numberOfYears = ((Number)(jsonObject.get(Constants.NUMBEROFYEAR))).intValue();
             santaBudget = ((Number)(jsonObject.get(Constants.SANTABUDGET))).doubleValue();
 
@@ -151,11 +149,6 @@ public class InputLoader {
             e.printStackTrace();
         }
 
-//        System.out.println(numberOfYears);
-//        System.out.println(santaBudget);
-//        System.out.println(children);
-//        System.out.println(gifts);
-//        System.out.println(annualChanges);
         return new Input(numberOfYears, santaBudget, children, gifts, annualChanges);
     }
 }

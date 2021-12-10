@@ -1,1 +1,226 @@
-{"annualChildren":[{"children":[{"lastName":"Popa","firstName":"Tudor","niceScoreHistory":[9.0],"city":"Bucuresti","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":0.0,"id":0,"receivedGifts":[],"age":14,"averageScore":9.0},{"lastName":"Mihalache","firstName":"Matei","niceScoreHistory":[2.0],"city":"Constanta","giftsPreferences":["Toys","Sweets","Books"],"assignedBudget":0.0,"id":1,"receivedGifts":[],"age":4,"averageScore":10.0},{"lastName":"Ionescu","firstName":"Matei","niceScoreHistory":[7.0],"city":"Braila","giftsPreferences":["Technology"],"assignedBudget":0.0,"id":2,"receivedGifts":[],"age":16,"averageScore":7.0},{"lastName":"Popa","firstName":"Diana","niceScoreHistory":[7.0],"city":"Cluj-Napoca","giftsPreferences":["Books"],"assignedBudget":0.0,"id":3,"receivedGifts":[],"age":8,"averageScore":7.0},{"lastName":"Stoica","firstName":"Alexandra","niceScoreHistory":[3.0],"city":"Constanta","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":0.0,"id":4,"receivedGifts":[],"age":11,"averageScore":3.0}]},{"children":[{"lastName":"Popa","firstName":"Tudor","niceScoreHistory":[9.0],"city":"Bucuresti","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":200.0,"id":0,"receivedGifts":[{"price":20.0,"category":"Sweets","productName":"Bag of Candy"},{"price":10.0,"category":"Board Games","productName":"Uno"}],"age":15,"averageScore":9.0},{"lastName":"Mihalache","firstName":"Matei","niceScoreHistory":[2.0],"city":"Constanta","giftsPreferences":["Toys","Sweets","Books"],"assignedBudget":200.0,"id":1,"receivedGifts":[{"price":5.0,"category":"Toys","productName":"Teddy Bear"},{"price":20.0,"category":"Sweets","productName":"Bag of Candy"},{"price":25.0,"category":"Books","productName":"Diary of a Wimpy Kid"}],"age":5,"averageScore":10.0},{"lastName":"Ionescu","firstName":"Matei","niceScoreHistory":[7.0],"city":"Braila","giftsPreferences":["Technology"],"assignedBudget":200.0,"id":2,"receivedGifts":[],"age":17,"averageScore":7.0},{"lastName":"Popa","firstName":"Diana","niceScoreHistory":[7.0],"city":"Cluj-Napoca","giftsPreferences":["Books"],"assignedBudget":200.0,"id":3,"receivedGifts":[{"price":25.0,"category":"Books","productName":"Diary of a Wimpy Kid"}],"age":9,"averageScore":7.0},{"lastName":"Stoica","firstName":"Alexandra","niceScoreHistory":[3.0],"city":"Constanta","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":200.0,"id":4,"receivedGifts":[{"price":10.0,"category":"Board Games","productName":"Uno"}],"age":12,"averageScore":3.0}]},{"children":[{"lastName":"Popa","firstName":"Tudor","niceScoreHistory":[9.0],"city":"Bucuresti","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":345.0,"id":0,"receivedGifts":[{"price":20.0,"category":"Sweets","productName":"Bag of Candy"},{"price":10.0,"category":"Board Games","productName":"Uno"},{"price":25.0,"category":"Books","productName":"Diary of a Wimpy Kid"}],"age":16,"averageScore":9.0},{"lastName":"Mihalache","firstName":"Matei","niceScoreHistory":[2.0],"city":"Constanta","giftsPreferences":["Toys","Sweets","Books"],"assignedBudget":345.0,"id":1,"receivedGifts":[{"price":5.0,"category":"Toys","productName":"Teddy Bear"},{"price":20.0,"category":"Sweets","productName":"Bag of Candy"},{"price":25.0,"category":"Books","productName":"Diary of a Wimpy Kid"}],"age":6,"averageScore":10.0},{"lastName":"Ionescu","firstName":"Matei","niceScoreHistory":[7.0],"city":"Braila","giftsPreferences":["Technology"],"assignedBudget":345.0,"id":2,"receivedGifts":[],"age":18,"averageScore":7.0},{"lastName":"Popa","firstName":"Diana","niceScoreHistory":[7.0],"city":"Cluj-Napoca","giftsPreferences":["Books"],"assignedBudget":345.0,"id":3,"receivedGifts":[{"price":25.0,"category":"Books","productName":"Diary of a Wimpy Kid"}],"age":10,"averageScore":7.0},{"lastName":"Stoica","firstName":"Alexandra","niceScoreHistory":[3.0],"city":"Constanta","giftsPreferences":["Sweets","Board Games","Books"],"assignedBudget":345.0,"id":4,"receivedGifts":[{"price":20.0,"category":"Sweets","productName":"Bag of Candy"}],"age":13,"averageScore":3.0}]}]}
+{
+  "annualChildren" : [ {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Tudor",
+      "city" : "Bucuresti",
+      "age" : 14,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 9.0,
+      "niceScoreHistory" : [ 9.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 1,
+      "lastName" : "Mihalache",
+      "firstName" : "Matei",
+      "city" : "Constanta",
+      "age" : 4,
+      "giftsPreferences" : [ "Toys", "Sweets", "Books" ],
+      "averageScore" : 10.0,
+      "niceScoreHistory" : [ 2.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Matei",
+      "city" : "Braila",
+      "age" : 16,
+      "giftsPreferences" : [ "Technology" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 3,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Cluj-Napoca",
+      "age" : 8,
+      "giftsPreferences" : [ "Books" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 4,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Constanta",
+      "age" : 11,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 3.0,
+      "niceScoreHistory" : [ 3.0 ],
+      "assignedBudget" : 0.0,
+      "receivedGifts" : [ ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Tudor",
+      "city" : "Bucuresti",
+      "age" : 15,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 9.0,
+      "niceScoreHistory" : [ 9.0 ],
+      "assignedBudget" : 64.28571428571429,
+      "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Mihalache",
+      "firstName" : "Matei",
+      "city" : "Constanta",
+      "age" : 5,
+      "giftsPreferences" : [ "Toys", "Sweets", "Books" ],
+      "averageScore" : 2.0,
+      "niceScoreHistory" : [ 2.0 ],
+      "assignedBudget" : 14.285714285714286,
+      "receivedGifts" : [ {
+        "productName" : "Teddy Bear",
+        "price" : 5.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Matei",
+      "city" : "Braila",
+      "age" : 17,
+      "giftsPreferences" : [ "Technology" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 50.0,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 3,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Cluj-Napoca",
+      "age" : 9,
+      "giftsPreferences" : [ "Books" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 50.0,
+      "receivedGifts" : [ {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Constanta",
+      "age" : 12,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 3.0,
+      "niceScoreHistory" : [ 3.0 ],
+      "assignedBudget" : 21.42857142857143,
+      "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      } ]
+    } ]
+  }, {
+    "children" : [ {
+      "id" : 0,
+      "lastName" : "Popa",
+      "firstName" : "Tudor",
+      "city" : "Bucuresti",
+      "age" : 16,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 9.0,
+      "niceScoreHistory" : [ 9.0 ],
+      "assignedBudget" : 110.89285714285714,
+      "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 1,
+      "lastName" : "Mihalache",
+      "firstName" : "Matei",
+      "city" : "Constanta",
+      "age" : 6,
+      "giftsPreferences" : [ "Toys", "Sweets", "Books" ],
+      "averageScore" : 2.0,
+      "niceScoreHistory" : [ 2.0 ],
+      "assignedBudget" : 24.642857142857142,
+      "receivedGifts" : [ {
+        "productName" : "Teddy Bear",
+        "price" : 5.0,
+        "category" : "Toys"
+      } ]
+    }, {
+      "id" : 2,
+      "lastName" : "Ionescu",
+      "firstName" : "Matei",
+      "city" : "Braila",
+      "age" : 18,
+      "giftsPreferences" : [ "Technology" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 86.25,
+      "receivedGifts" : [ ]
+    }, {
+      "id" : 3,
+      "lastName" : "Popa",
+      "firstName" : "Diana",
+      "city" : "Cluj-Napoca",
+      "age" : 10,
+      "giftsPreferences" : [ "Books" ],
+      "averageScore" : 7.0,
+      "niceScoreHistory" : [ 7.0 ],
+      "assignedBudget" : 86.25,
+      "receivedGifts" : [ {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      } ]
+    }, {
+      "id" : 4,
+      "lastName" : "Stoica",
+      "firstName" : "Alexandra",
+      "city" : "Constanta",
+      "age" : 13,
+      "giftsPreferences" : [ "Sweets", "Board Games", "Books" ],
+      "averageScore" : 3.0,
+      "niceScoreHistory" : [ 3.0 ],
+      "assignedBudget" : 36.964285714285715,
+      "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      } ]
+    } ]
+  } ]
+}

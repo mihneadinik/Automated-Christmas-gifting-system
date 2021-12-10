@@ -5,8 +5,10 @@ import common.Constants;
 import databases.Database;
 import fileio.Input;
 import fileio.InputLoader;
+import fileio.OutputModel;
 import fileio.Writer;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import simulation.SimulateYears;
 
 import java.io.File;
@@ -14,6 +16,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -65,11 +69,12 @@ public final class Main {
      */
     public static void action(final String filePath1,
                               final String filePath2) throws IOException {
+        System.out.println(filePath1);
         InputLoader inputLoader = new InputLoader(filePath1);
         Input input = inputLoader.readData();
 
         Writer fileWriter = new Writer(filePath2);
-        JSONArray arrayResult = new JSONArray();
+        List<JSONObject> arrayResult = new ArrayList<>();
 
         // introduce the objects in an empty database
         Database.getInstance().clearDatabase();
@@ -78,14 +83,11 @@ public final class Main {
         Database.getInstance().setChildrenList(input.getChildData());
         Database.getInstance().setGiftsList(input.getGiftsData());
         Database.getInstance().setAnnualChangeList(input.getAnnualChangesData());
-//
-//        // Initialise the object that solves the inputs
-//        ActionSolver solver = new ActionSolver(fileWriter, arrayResult, input.getCommands());
-//        solver.solveActions();
+
         SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(), arrayResult, fileWriter);
         simulation.firstYear();
         simulation.nextYears();
-//
+
         fileWriter.closeJSON(arrayResult);
 
     }

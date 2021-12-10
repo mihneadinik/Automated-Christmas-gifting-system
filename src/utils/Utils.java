@@ -12,10 +12,7 @@ import objects.Gift;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public final class Utils {
     private Utils() {}
@@ -155,7 +152,8 @@ public final class Utils {
     public static JSONArray giftsToJsonArray(final List<Gift> gifts) {
         JSONArray out = new JSONArray();
         for (Gift gift : gifts) {
-            JSONObject giftJson = new JSONObject();
+//            JSONObject giftJson = new JSONObject();
+            Map giftJson = new LinkedHashMap();
             giftJson.put(Constants.PRODUCTNAME, gift.getProductName());
             giftJson.put(Constants.PRICE, gift.getPrice());
             giftJson.put(Constants.CATEGORY, Utils.categoryToString(gift.getCategory()));

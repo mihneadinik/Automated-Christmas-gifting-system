@@ -84,7 +84,9 @@ public final class Child implements ChildUpdate {
         // adaug fiecare preferinta noua si o scot din lista veche (daca exista)
         for (Category category : newGifts) {
             this.giftsPreference.remove(category);
-            newPreferenceList.add(category);
+            if (!newPreferenceList.contains(category)) {
+                newPreferenceList.add(category);
+            }
         }
         // adaug in noua liste preferintele ramase
         for (Category category : this.giftsPreference) {
@@ -100,6 +102,7 @@ public final class Child implements ChildUpdate {
     @Override
     public void updateAge() {
         this.age++;
+        computeType();
     }
 
     /**
@@ -120,13 +123,13 @@ public final class Child implements ChildUpdate {
     }
 
     private void computeType() {
-        if (this.age < 5) {
+        if (this.age < Constants.BABYAGE) {
             this.type = Constants.BABY;
         } else {
-            if (this.age < 12) {
+            if (this.age < Constants.KIDAGE) {
                 this.type = Constants.KID;
             } else {
-                if (this.age < 18) {
+                if (this.age <= Constants.ADULTAGE) {
                     this.type = Constants.TEEN;
                 } else {
                     this.type = Constants.YOUNGADULT;

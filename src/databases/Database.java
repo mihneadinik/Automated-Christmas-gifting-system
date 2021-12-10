@@ -75,7 +75,7 @@ public final class Database {
     public List<Child> getGiftableChildren() {
         List<Child> giftableChildren = new ArrayList<>();
         for (Child child : this.childrenList) {
-            if (child.getAge() < Constants.ADULTAGE) {
+            if (child.getAge() <= Constants.ADULTAGE) {
                 giftableChildren.add(child);
             }
         }
