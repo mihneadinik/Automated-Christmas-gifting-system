@@ -69,7 +69,6 @@ public final class Main {
      */
     public static void action(final String filePath1,
                               final String filePath2) throws IOException {
-        System.out.println(filePath1);
         InputLoader inputLoader = new InputLoader(filePath1);
         Input input = inputLoader.readData();
 

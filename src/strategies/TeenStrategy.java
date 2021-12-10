@@ -16,7 +16,6 @@ public final class TeenStrategy implements AverageScoreStrategy{
     public Double computeAverageScore() {
         int count = 0;
         Double totalScore = 0.0;
-        System.out.println(currChild.getLastname() + " " + currChild.getFirstname() + " " + currChild.getScoreHistory());
         for (int i = 1; i <= this.currChild.getScoreHistory().size(); i++) {
             totalScore += (i * this.currChild.getScoreHistory().get(i - 1));
             count += i;
