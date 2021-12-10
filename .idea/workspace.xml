@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="" />
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ref/ref_test25.json" beforeDir="false" afterPath="$PROJECT_DIR$/ref/ref_test25.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +83,7 @@
       <updated>1638807258397</updated>
       <workItem from="1638869727737" duration="761000" />
       <workItem from="1638953058218" duration="15893000" />
-      <workItem from="1638992305543" duration="53308000" />
+      <workItem from="1638992305543" duration="53923000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -97,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639136594876</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="remove sout">
+      <created>1639137145734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639137145734</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +130,7 @@
     </ignored-roots>
     <MESSAGE value="maybe working, resolve output style" />
     <MESSAGE value="Final idea, resolve checkstyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final idea, resolve checkstyle" />
+    <MESSAGE value="remove sout" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove sout" />
   </component>
 </project>
