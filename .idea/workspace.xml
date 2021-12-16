@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ref/ref_test25.json" beforeDir="false" afterPath="$PROJECT_DIR$/ref/ref_test25.json" afterDir="false" />
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="remove sout">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/AnnualChangesInputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/AnnualChangesInputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildInputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildInputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildrenUpdateInputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildrenUpdateInputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/GiftsInputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/GiftsInputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/Input.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/OutputModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/OutputModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/AnnualChange.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/AnnualChange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/ChildrenUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/ChildrenUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Gift.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Gift.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SimulateYears.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SimulateYears.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databases/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databases/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/ChildInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/GiftsInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/GiftsInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/InputLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/OutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/OutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/AnnualChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/AnnualChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ChildrenUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ChildrenUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Gift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observers/ChildUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observers/ChildUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/observers/SantaClausUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/observers/SantaClausUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SimulateYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SimulateYears.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SolveYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SolveYear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/YearData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/YearData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/AverageScoreStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/AverageScoreStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/BabyStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/BabyStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/KidStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/KidStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/StrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/StrategyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategies/TeenStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/TeenStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +78,16 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/fileio/ChildInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/InputLoader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/Input.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/GiftsInputData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,6 +140,11 @@
       <workItem from="1638869727737" duration="761000" />
       <workItem from="1638953058218" duration="15893000" />
       <workItem from="1638992305543" duration="53923000" />
+      <workItem from="1639151246394" duration="190000" />
+      <workItem from="1639151752809" duration="1487000" />
+      <workItem from="1639566837063" duration="7000" />
+      <workItem from="1639612469904" duration="1564000" />
+      <workItem from="1639647407884" duration="1942000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -122,7 +183,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

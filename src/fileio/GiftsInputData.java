@@ -2,7 +2,7 @@ package fileio;
 
 import enums.Category;
 
-public class GiftsInputData {
+public final class GiftsInputData {
     private String productName;
     private Double price;
     private Category category;
@@ -18,7 +18,7 @@ public class GiftsInputData {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    public void setProductName(final String productName) {
         this.productName = productName;
     }
 
@@ -26,7 +26,7 @@ public class GiftsInputData {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(final Double price) {
         this.price = price;
     }
 
@@ -34,16 +34,7 @@ public class GiftsInputData {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(final Category category) {
         this.category = category;
-    }
-
-    @Override
-    public String toString() {
-        return "GiftsInputData{" +
-                "productName='" + productName + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
     }
 }

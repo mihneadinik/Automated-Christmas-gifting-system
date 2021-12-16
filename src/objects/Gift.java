@@ -2,7 +2,7 @@ package objects;
 
 import enums.Category;
 
-public class Gift {
+public final class Gift {
     private String productName;
     private Double price;
     private Category category;
@@ -23,7 +23,7 @@ public class Gift {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    public void setProductName(final String productName) {
         this.productName = productName;
     }
 
@@ -31,7 +31,7 @@ public class Gift {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(final Double price) {
         this.price = price;
     }
 
@@ -39,16 +39,7 @@ public class Gift {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(final Category category) {
         this.category = category;
-    }
-
-    @Override
-    public String toString() {
-        return "Gift{" +
-                "productName='" + productName + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
     }
 }

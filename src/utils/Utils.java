@@ -10,13 +10,22 @@ import objects.Child;
 import objects.ChildrenUpdate;
 import objects.Gift;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public final class Utils {
-    private Utils() {}
+    private Utils() { }
 
+    /**
+     * function that converts a list of gifts input data
+     * to an actual list of gifts
+     * @param list the list with input data
+     * @return converted list of Gifts
+     */
     public static List<Gift> inputGiftListConverter(final List<GiftsInputData> list) {
         List<Gift> outList = new ArrayList<>();
 
@@ -27,6 +36,12 @@ public final class Utils {
         return outList;
     }
 
+    /**
+     * function that converts a list of child input data
+     * to an actual list of children
+     * @param list the list with input data
+     * @return converted list of children
+     */
     public static List<Child> inputChildListConverter(final List<ChildInputData> list) {
         List<Child> outList = new ArrayList<>();
 
@@ -39,16 +54,30 @@ public final class Utils {
         return outList;
     }
 
-    public static List<ChildrenUpdate> inputChildrenUpdateListConverter(final List<ChildrenUpdateInputData> list) {
+    /**
+     * function that converts a list of children update
+     * input data to an actual list of children updates
+     * @param list the list with input data
+     * @return converted list of children updates data
+     */
+    public static List<ChildrenUpdate> inputChildrenUpdateListConverter(
+            final List<ChildrenUpdateInputData> list) {
         List<ChildrenUpdate> outList = new ArrayList<>();
 
         for (ChildrenUpdateInputData data : list) {
-            outList.add(new ChildrenUpdate(data.getId(), data.getNiceScore(), data.getGiftsPreferences()));
+            outList.add(new ChildrenUpdate(data.getId(), data.getNiceScore(),
+                    data.getGiftsPreferences()));
         }
 
         return outList;
     }
 
+    /**
+     * function that converts a string with the name
+     * of a city to its enum correspondent
+     * @param city String with the name of a city
+     * @return the city enum item
+     */
     public static Cities stringToCities(final String city) {
         return switch (city.toLowerCase()) {
             case "bucuresti" -> Cities.BUCURESTI;
@@ -65,6 +94,12 @@ public final class Utils {
         };
     }
 
+    /**
+     * function that converts an enum city item
+     * to a string one
+     * @param city the city in enum form
+     * @return string with the name of a city
+     */
     public static String citiesToString(final Cities city) {
         return switch (city) {
             case BUCURESTI -> "Bucuresti";
@@ -81,6 +116,12 @@ public final class Utils {
         };
     }
 
+    /**
+     * function that converts a string with the name
+     * of a category to its enum correspondent
+     * @param category String with the name of a category
+     * @return the category enum item
+     */
     public static Category stringToCategory(final String category) {
         return switch (category.toLowerCase()) {
             case "board games" -> Category.BOARD_GAMES;
@@ -93,6 +134,12 @@ public final class Utils {
         };
     }
 
+    /**
+     * function that converts an enum category item
+     * to a string one
+     * @param category the category in enum form
+     * @return string with the name of a category
+     */
     public static String categoryToString(final Category category) {
         return switch (category) {
             case BOARD_GAMES -> "Board Games";
@@ -105,6 +152,11 @@ public final class Utils {
         };
     }
 
+    /**
+     * function used to parse data read in JSON style
+     * @param array the json array to be converted
+     * @return the converted array
+     */
     public static ArrayList<Category> convertJSONArraytoCategory(final JSONArray array) {
         if (array != null) {
             ArrayList<Category> finalArray = new ArrayList<>();
@@ -117,6 +169,12 @@ public final class Utils {
         }
     }
 
+    /**
+     * function that maps a sorted list of gifts
+     * by thei categories
+     * @param gifts the list of gifts
+     * @return the converted map
+     */
     public static Map<Category, ArrayList<Gift>> convertGiftListToMap(final List<Gift> gifts) {
         Map<Category, ArrayList<Gift>> map = new HashMap<>();
         map.put(Category.BOARD_GAMES, new ArrayList<Gift>());
@@ -133,6 +191,11 @@ public final class Utils {
         return map;
     }
 
+    /**
+     * function that creates a JSONArray based on a list of categories
+     * @param categories the list of categories
+     * @return the converted JSONArray
+     */
     public static JSONArray categoryListToJsonArray(final List<Category> categories) {
         JSONArray out = new JSONArray();
         for (Category category : categories) {
@@ -141,6 +204,11 @@ public final class Utils {
         return out;
     }
 
+    /**
+     * function that creates a JSONArray based on a list of niceScores
+     * @param history the list of niceScores
+     * @return the converted JSONArray
+     */
     public static JSONArray niceScoreHistoryToJsonArray(final List<Double> history) {
         JSONArray out = new JSONArray();
         for (Double score : history) {
@@ -149,6 +217,11 @@ public final class Utils {
         return out;
     }
 
+    /**
+     * function that creates a JSONArray based on a list of gifts
+     * @param gifts the list of gifts
+     * @return the converted JSONArray
+     */
     public static JSONArray giftsToJsonArray(final List<Gift> gifts) {
         JSONArray out = new JSONArray();
         for (Gift gift : gifts) {

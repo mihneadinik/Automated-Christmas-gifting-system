@@ -8,16 +8,12 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import common.Constants;
 import objects.Child;
 import objects.Gift;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import simulation.YearData;
 import utils.Utils;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public final class Writer {
     private final FileWriter file;
@@ -26,6 +22,13 @@ public final class Writer {
         this.file = new FileWriter(path);
     }
 
+    /**
+     * @param currChild copilul pe care il adaug la lista
+     * cu copiii care au primit cadouri intr-un anumit an
+     * @param receivedGifts cadourile primite de copil
+     * @return Stringul aferent output-ului sau
+     * @throws IOException
+     */
     // va scrie fiecare copil in parte din lista de copii care au primit cadouri la pasul i
     // fiecare object rezultat va fi adaugat la finalul unui vector de jsonarray uri
     public String writeChild(final Child currChild,
@@ -36,9 +39,11 @@ public final class Writer {
         object.put((String) Constants.FIRSTNAME, currChild.getFirstname());
         object.put((String) Constants.CITY, Utils.citiesToString(currChild.getCity()));
         object.put((String) Constants.AGE, currChild.getAge());
-        object.put((String) Constants.GIFTPREFERENCES, Utils.categoryListToJsonArray(currChild.getGiftsPreference()));
+        object.put((String) Constants.GIFTPREFERENCES,
+                Utils.categoryListToJsonArray(currChild.getGiftsPreference()));
         object.put((String) Constants.AVERAGESCORE, currChild.getAverageScore());
-        object.put((String) Constants.NICESCOREHISTORY, Utils.niceScoreHistoryToJsonArray(currChild.getScoreHistory()));
+        object.put((String) Constants.NICESCOREHISTORY,
+                Utils.niceScoreHistoryToJsonArray(currChild.getScoreHistory()));
         object.put((String) Constants.ASSIGNEDBUDGET, currChild.getSantaBudget());
         object.put((String) Constants.RECEIVEDGIFTS, Utils.giftsToJsonArray(receivedGifts));
 
@@ -59,17 +64,13 @@ public final class Writer {
 
     }
 
+    /**
+     * functie care scrie rezultatul final in
+     * format JSON
+     * @param array outputul corespunzator testului
+     * @throws IOException
+     */
     public void closeJSON(final List<JSONObject> array) throws IOException {
-//        try {
-//            JSONObject out = new JSONObject();
-//            out.put(Constants.ANNUALCHILDREN, array);
-////            file.write(array.toJSONString());
-//            file.write(out.toJSONString());
-//            file.flush();
-//            file.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
 
         JSONObject finalOut = new JSONObject();
         finalOut.put("annualChildren", array);

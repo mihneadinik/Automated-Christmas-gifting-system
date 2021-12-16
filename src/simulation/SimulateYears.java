@@ -2,37 +2,27 @@ package simulation;
 
 import common.Constants;
 import databases.Database;
-import fileio.OutputModel;
-import fileio.Writer;
 import objects.AnnualChange;
-import objects.Child;
-import objects.ChildrenUpdate;
-import objects.Gift;
-import observers.SantaClausUpdate;
-import org.json.simple.JSONArray;
+import objects.Child;;
 import org.json.simple.JSONObject;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-public final class SimulateYears{
+public final class SimulateYears {
     private YearData currYear; // observatorul meu
     private List<AnnualChange> changes;
     private List<JSONObject> arrayResult;
-    private Writer fileWriter;
 
-    public SimulateYears(final List<AnnualChange> changesList, final List<JSONObject> arrayResult, final Writer fileWriter) {
+    public SimulateYears(final List<AnnualChange> changesList, final List<JSONObject> arrayResult) {
         this.changes = changesList;
         this.currYear = null;
         this.arrayResult = arrayResult;
-        this.fileWriter = fileWriter;
     }
 
     /**
      * function that computes the work-flow of the first year
      */
-    public void firstYear() throws IOException {
+    public void firstYear() {
         Database.getInstance().sortChildren();
         this.currYear = new YearData(Database.getInstance().getSantaBudget(),
                 Database.getInstance().getGiftsList(),
@@ -40,22 +30,22 @@ public final class SimulateYears{
         this.currYear.computeBudget();
         this.currYear.updateBudgetForChildren();
         this.currYear.sortGiftList();
-        SolveYear.giveGifts(currYear, arrayResult, fileWriter);
+        SolveYear.giveGifts(currYear, arrayResult);
     }
 
     /**
      * function that computes the work-flow of next years
      */
-    public void nextYears() throws IOException {
+    public void nextYears() {
         for (int i = 0; i < Database.getInstance().getNumberOfYears(); i++) {
             // iau annual change ul curent si aplic actualizarile
             AnnualChange currChange = this.changes.get(i);
             eachYearUpdate(currChange);
-            SolveYear.giveGifts(currYear, arrayResult, fileWriter);
+            SolveYear.giveGifts(currYear, arrayResult);
         }
     }
 
-    private void eachYearUpdate (AnnualChange currChange) {
+    private void eachYearUpdate(final AnnualChange currChange) {
         // actualizez lista de cadouri
         this.currYear.updateGiftsList(currChange.getNewGifts());
         // a trecut un an => cresc varsta
@@ -77,7 +67,7 @@ public final class SimulateYears{
         }
     }
 
-    private void updateChildrenList(List<Child> newChildren) {
+    private void updateChildrenList(final List<Child> newChildren) {
         if (newChildren != null) {
             for (Child child : newChildren) {
                 if (child.getAge() <= Constants.ADULTAGE) {

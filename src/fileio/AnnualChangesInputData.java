@@ -2,7 +2,7 @@ package fileio;
 
 import java.util.List;
 
-public class AnnualChangesInputData {
+public final class AnnualChangesInputData {
     private Double newSantaBudget;
     private List<GiftsInputData> newGifts;
     private List<ChildInputData> newChildren;
@@ -21,7 +21,7 @@ public class AnnualChangesInputData {
         return newSantaBudget;
     }
 
-    public void setNewSantaBudget(Double newSantaBudget) {
+    public void setNewSantaBudget(final Double newSantaBudget) {
         this.newSantaBudget = newSantaBudget;
     }
 
@@ -29,7 +29,7 @@ public class AnnualChangesInputData {
         return newGifts;
     }
 
-    public void setNewGifts(List<GiftsInputData> newGifts) {
+    public void setNewGifts(final List<GiftsInputData> newGifts) {
         this.newGifts = newGifts;
     }
 
@@ -37,7 +37,7 @@ public class AnnualChangesInputData {
         return newChildren;
     }
 
-    public void setNewChildren(List<ChildInputData> newChildren) {
+    public void setNewChildren(final List<ChildInputData> newChildren) {
         this.newChildren = newChildren;
     }
 
@@ -45,17 +45,7 @@ public class AnnualChangesInputData {
         return childrenUpdate;
     }
 
-    public void setChildrenUpdate(List<ChildrenUpdateInputData> childrenUpdate) {
+    public void setChildrenUpdate(final List<ChildrenUpdateInputData> childrenUpdate) {
         this.childrenUpdate = childrenUpdate;
-    }
-
-    @Override
-    public String toString() {
-        return "AnnualChangesInputData{" +
-                "newSantaBudget=" + newSantaBudget +
-                ", newGifts=" + newGifts +
-                ", newChildren=" + newChildren +
-                ", childrenUpdate=" + childrenUpdate +
-                '}';
     }
 }

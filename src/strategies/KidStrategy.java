@@ -1,9 +1,8 @@
 package strategies;
 
-import common.Constants;
 import objects.Child;
 
-public final class KidStrategy implements AverageScoreStrategy{
+public final class KidStrategy implements AverageScoreStrategy {
     private final Child currChild;
 
     public KidStrategy(final Child child) {

@@ -5,7 +5,7 @@ import enums.Cities;
 
 import java.util.List;
 
-public class ChildInputData {
+public final class ChildInputData {
     private Integer id;
     private String lastname;
     private String firstname;
@@ -30,7 +30,7 @@ public class ChildInputData {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -38,7 +38,7 @@ public class ChildInputData {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
+    public void setFirstname(final String firstname) {
         this.firstname = firstname;
     }
 
@@ -46,7 +46,7 @@ public class ChildInputData {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
+    public void setLastname(final String lastname) {
         this.lastname = lastname;
     }
 
@@ -54,7 +54,7 @@ public class ChildInputData {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(final Integer age) {
         this.age = age;
     }
 
@@ -62,7 +62,7 @@ public class ChildInputData {
         return city;
     }
 
-    public void setCity(Cities city) {
+    public void setCity(final Cities city) {
         this.city = city;
     }
 
@@ -70,7 +70,7 @@ public class ChildInputData {
         return niceScore;
     }
 
-    public void setNiceScore(Double niceScore) {
+    public void setNiceScore(final Double niceScore) {
         this.niceScore = niceScore;
     }
 
@@ -78,20 +78,7 @@ public class ChildInputData {
         return giftsPreference;
     }
 
-    public void setGiftsPreference(List<Category> giftsPreference) {
+    public void setGiftsPreference(final List<Category> giftsPreference) {
         this.giftsPreference = giftsPreference;
-    }
-
-    @Override
-    public String toString() {
-        return "ChildInputData{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", age=" + age +
-                ", city=" + city +
-                ", niceScore=" + niceScore +
-                ", giftsPreference=" + giftsPreference +
-                '}';
     }
 }
