@@ -73,7 +73,7 @@ public final class Main {
         Writer fileWriter = new Writer(filePath2);
         List<JSONObject> arrayResult = new ArrayList<>();
 
-        // introduce the objects in an empty database
+        // introduc obiectele citite intr-o baza de date goala
         Database.getInstance().clearDatabase();
         Database.getInstance().setNumberOfYears(input.getNumberOfYears());
         Database.getInstance().setSantaBudget(input.getSantaBudget());
@@ -81,6 +81,7 @@ public final class Main {
         Database.getInstance().setGiftsList(input.getGiftsData());
         Database.getInstance().setAnnualChangeList(input.getAnnualChangesData());
 
+        // creez si rulez simularea
         SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(),
                 arrayResult);
         simulation.firstYear();

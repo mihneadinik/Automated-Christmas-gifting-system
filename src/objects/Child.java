@@ -111,6 +111,7 @@ public final class Child implements ChildUpdate {
      */
     @Override
     public void computeAverageScore() {
+        // apelam strategia corespunzatoare varstei copilului
         AverageScoreStrategy strategy = StrategyFactory.createAverageScoreStrategy(this);
         if (strategy != null) {
             this.averageScore = strategy.computeAverageScore();
