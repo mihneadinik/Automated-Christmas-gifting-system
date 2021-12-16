@@ -35,13 +35,13 @@ public final class Main {
         // access the directory with inputs
         File directory = new File(Constants.TESTS_PATH);
         // create the directory for outputs (if it doesn't exist)
-        Path path = Paths.get(Constants.OUTPUT_PATH);
+        Path path = Paths.get(Constants.OUT_FOLDER);
         if (!Files.exists(path)) {
             Files.createDirectories(path);
         }
 
         // delete the old output files
-        File outputDirectory = new File(Constants.OUTPUT_PATH);
+        File outputDirectory = new File(Constants.OUT_FOLDER);
         for (File file : Objects.requireNonNull(outputDirectory.listFiles())) {
             if (!file.delete()) {
                 System.out.println("Error deleting file");
@@ -49,7 +49,9 @@ public final class Main {
         }
 
         for (File file : Objects.requireNonNull(directory.listFiles())) {
-            String filepath = Constants.OUT_PATH + file.getName();
+            String fileName = file.getName();
+            fileName = fileName.substring(Constants.TESTNAMEOFFSET);
+            String filepath = Constants.OUTPUT_PATH + fileName;
             File out = new File(filepath);
             boolean isCreated = out.createNewFile();
             if (isCreated) {

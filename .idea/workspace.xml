@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="no coding style error, make comments prettier later">
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="final work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/InputLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_test9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +132,8 @@
       <workItem from="1639566837063" duration="7000" />
       <workItem from="1639612469904" duration="1564000" />
       <workItem from="1639647407884" duration="2303000" />
-      <workItem from="1639659589464" duration="1763000" />
+      <workItem from="1639659589464" duration="1960000" />
+      <workItem from="1639661723387" duration="783000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -133,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639654281588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="final work">
+      <created>1639661542015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639661542015</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +195,7 @@
     <MESSAGE value="Final idea, resolve checkstyle" />
     <MESSAGE value="remove sout" />
     <MESSAGE value="no coding style error, make comments prettier later" />
-    <option name="LAST_COMMIT_MESSAGE" value="no coding style error, make comments prettier later" />
+    <MESSAGE value="final work" />
+    <option name="LAST_COMMIT_MESSAGE" value="final work" />
   </component>
 </project>
