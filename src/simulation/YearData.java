@@ -16,7 +16,8 @@ public final class YearData implements SantaClausUpdate {
     private List<Child> yearGiftableChildren;
     private Double budgetUnit;
 
-    public YearData(final Double yearBudget, final List<Gift> yearGiftsList, final List<Child> yearGiftableChildren) {
+    public YearData(final Double yearBudget, final List<Gift> yearGiftsList,
+                    final List<Child> yearGiftableChildren) {
         this.yearBudget = yearBudget;
         this.yearGiftsList = yearGiftsList;
         this.yearGiftableChildren = yearGiftableChildren;
@@ -45,7 +46,7 @@ public final class YearData implements SantaClausUpdate {
      * @param newBudget new year's budget
      */
     @Override
-    public void updateBudget(Double newBudget) {
+    public void updateBudget(final Double newBudget) {
         this.yearBudget = newBudget;
         computeBudget();
         updateBudgetForChildren();
@@ -56,7 +57,7 @@ public final class YearData implements SantaClausUpdate {
      * @param newGifts the gifts to be added
      */
     @Override
-    public void updateGiftsList(List<Gift> newGifts) {
+    public void updateGiftsList(final List<Gift> newGifts) {
         for (Gift gift : newGifts) {
             if (!this.yearGiftsList.contains(gift)) {
                 this.yearGiftsList.add(gift);
@@ -85,7 +86,7 @@ public final class YearData implements SantaClausUpdate {
      * @param updates the list with children updates
      */
     @Override
-    public void applyChildrenUpdate(List<ChildrenUpdate> updates) {
+    public void applyChildrenUpdate(final List<ChildrenUpdate> updates) {
         for (ChildrenUpdate currUpdate : updates) {
             Child currChild = getChildById(currUpdate.getId());
             if (currChild != null) {
@@ -106,7 +107,7 @@ public final class YearData implements SantaClausUpdate {
         }
     }
 
-    private Child getChildById(Integer id) {
+    private Child getChildById(final Integer id) {
         for (Child child : this.yearGiftableChildren) {
             if (child.getId().equals(id)) {
                 return child;

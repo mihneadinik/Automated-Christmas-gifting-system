@@ -5,6 +5,9 @@ import objects.Child;
 
 public final class StrategyFactory {
 
+    private StrategyFactory() {
+    }
+
     /**
      * function that return the proper strategy for computing
      * the average score for a certain child
@@ -12,8 +15,8 @@ public final class StrategyFactory {
      * the average score
      * @return the proper strategy to compute it
      */
-    public static AverageScoreStrategy createAverageScoreStrategy(Child child) {
-        switch(child.getType()) {
+    public static AverageScoreStrategy createAverageScoreStrategy(final Child child) {
+        switch (child.getType()) {
             case Constants.BABY -> {
                 return new BabyStrategy(child);
             }
@@ -26,7 +29,10 @@ public final class StrategyFactory {
             case Constants.YOUNGADULT -> {
                 return null;
             }
+            default -> {
+                throw new IllegalArgumentException("The strategy for " + child.getType()
+                        + " is not supported");
+            }
         }
-        throw new IllegalArgumentException("The strategy for " + child.getType() + " is not supported");
     }
 }

@@ -3,7 +3,7 @@ package strategies;
 import common.Constants;
 import objects.Child;
 
-public final class BabyStrategy implements AverageScoreStrategy{
+public final class BabyStrategy implements AverageScoreStrategy {
     private final Child currChild;
 
     public BabyStrategy(final Child child) {

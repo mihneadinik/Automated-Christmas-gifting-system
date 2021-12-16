@@ -62,12 +62,12 @@ public final class Child implements ChildUpdate {
     /**
      * function that changes the niceScore of a child and
      * adds it to the history
-     * @param niceScore new niceScore of the year
+     * @param newNiceScore new niceScore of the year
      */
     @Override
-    public void updateNiceScore(Double niceScore) {
-        if (niceScore != null) {
-            this.niceScore = niceScore;
+    public void updateNiceScore(final Double newNiceScore) {
+        if (newNiceScore != null) {
+            this.niceScore = newNiceScore;
             this.scoreHistory.add(niceScore);
             computeAverageScore();
         }
@@ -78,7 +78,7 @@ public final class Child implements ChildUpdate {
      * @param newGifts the new preferences
      */
     @Override
-    public void updateGiftsPreferences(List<Category> newGifts) {
+    public void updateGiftsPreferences(final List<Category> newGifts) {
         // creez o lista noua de preferinte
         List<Category> newPreferenceList = new ArrayList<>();
         // adaug fiecare preferinta noua si o scot din lista veche (daca exista)
@@ -118,7 +118,7 @@ public final class Child implements ChildUpdate {
     }
 
     @Override
-    public void updateSantaBudget(Double budgetUnit) {
+    public void updateSantaBudget(final Double budgetUnit) {
         this.santaBudget = budgetUnit * this.averageScore;
     }
 
@@ -142,7 +142,7 @@ public final class Child implements ChildUpdate {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -150,7 +150,7 @@ public final class Child implements ChildUpdate {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
+    public void setFirstname(final String firstname) {
         this.firstname = firstname;
     }
 
@@ -158,7 +158,7 @@ public final class Child implements ChildUpdate {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
+    public void setLastname(final String lastname) {
         this.lastname = lastname;
     }
 
@@ -166,7 +166,7 @@ public final class Child implements ChildUpdate {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(final Integer age) {
         this.age = age;
     }
 
@@ -174,7 +174,7 @@ public final class Child implements ChildUpdate {
         return city;
     }
 
-    public void setCity(Cities city) {
+    public void setCity(final Cities city) {
         this.city = city;
     }
 
@@ -182,7 +182,7 @@ public final class Child implements ChildUpdate {
         return niceScore;
     }
 
-    public void setNiceScore(Double niceScore) {
+    public void setNiceScore(final Double niceScore) {
         this.niceScore = niceScore;
     }
 
@@ -190,7 +190,7 @@ public final class Child implements ChildUpdate {
         return giftsPreference;
     }
 
-    public void setGiftsPreference(List<Category> giftsPreference) {
+    public void setGiftsPreference(final List<Category> giftsPreference) {
         this.giftsPreference = giftsPreference;
     }
 
@@ -198,7 +198,7 @@ public final class Child implements ChildUpdate {
         return scoreHistory;
     }
 
-    public void setScoreHistory(List<Double> scoreHistory) {
+    public void setScoreHistory(final List<Double> scoreHistory) {
         this.scoreHistory = scoreHistory;
     }
 
@@ -206,7 +206,7 @@ public final class Child implements ChildUpdate {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(final String type) {
         this.type = type;
     }
 
@@ -214,7 +214,7 @@ public final class Child implements ChildUpdate {
         return santaBudget;
     }
 
-    public void setSantaBudget(Double santaBudget) {
+    public void setSantaBudget(final Double santaBudget) {
         this.santaBudget = santaBudget;
     }
 
@@ -222,7 +222,7 @@ public final class Child implements ChildUpdate {
         return averageScore;
     }
 
-    public void setAverageScore(Double averageScore) {
+    public void setAverageScore(final Double averageScore) {
         this.averageScore = averageScore;
     }
 
@@ -230,20 +230,7 @@ public final class Child implements ChildUpdate {
         return receivedGifts;
     }
 
-    public void setReceivedGifts(List<Gift> receivedGifts) {
+    public void setReceivedGifts(final List<Gift> receivedGifts) {
         this.receivedGifts = receivedGifts;
-    }
-
-    @Override
-    public String toString() {
-        return "Child{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", age=" + age +
-                ", city=" + city +
-                ", niceScore=" + niceScore +
-                ", giftsPreference=" + giftsPreference +
-                '}';
     }
 }

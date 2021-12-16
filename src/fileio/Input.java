@@ -2,7 +2,7 @@ package fileio;
 
 import java.util.List;
 
-public class Input {
+public final class Input {
     private final Integer numberOfYears;
     private final Double santaBudget;
     private final List<ChildInputData> childData;

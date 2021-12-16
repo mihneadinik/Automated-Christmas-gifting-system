@@ -1,18 +1,15 @@
 package objects;
 
-import fileio.ChildInputData;
-import fileio.ChildrenUpdateInputData;
-import fileio.GiftsInputData;
-
 import java.util.List;
 
-public class AnnualChange {
+public final class AnnualChange {
     private Double newSantaBudget;
     private List<Gift> newGifts;
     private List<Child> newChildren;
     private List<ChildrenUpdate> childrenUpdate;
 
-    public AnnualChange(final Double newSantaBudget, final List<Gift> newGifts, final List<Child> newChildren, final List<ChildrenUpdate> childrenUpdate) {
+    public AnnualChange(final Double newSantaBudget, final List<Gift> newGifts,
+                        final List<Child> newChildren, final List<ChildrenUpdate> childrenUpdate) {
         this.newSantaBudget = newSantaBudget;
         this.newGifts = newGifts;
         this.newChildren = newChildren;
@@ -23,7 +20,7 @@ public class AnnualChange {
         return newSantaBudget;
     }
 
-    public void setNewSantaBudget(Double newSantaBudget) {
+    public void setNewSantaBudget(final Double newSantaBudget) {
         this.newSantaBudget = newSantaBudget;
     }
 
@@ -31,7 +28,7 @@ public class AnnualChange {
         return newGifts;
     }
 
-    public void setNewGifts(List<Gift> newGifts) {
+    public void setNewGifts(final List<Gift> newGifts) {
         this.newGifts = newGifts;
     }
 
@@ -39,7 +36,7 @@ public class AnnualChange {
         return newChildren;
     }
 
-    public void setNewChildren(List<Child> newChildren) {
+    public void setNewChildren(final List<Child> newChildren) {
         this.newChildren = newChildren;
     }
 
@@ -47,17 +44,7 @@ public class AnnualChange {
         return childrenUpdate;
     }
 
-    public void setChildrenUpdate(List<ChildrenUpdate> childrenUpdate) {
+    public void setChildrenUpdate(final List<ChildrenUpdate> childrenUpdate) {
         this.childrenUpdate = childrenUpdate;
-    }
-
-    @Override
-    public String toString() {
-        return "AnnualChange{" +
-                "newSantaBudget=" + newSantaBudget +
-                ", newGifts=" + newGifts +
-                ", newChildren=" + newChildren +
-                ", childrenUpdate=" + childrenUpdate +
-                '}';
     }
 }

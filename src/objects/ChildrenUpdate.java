@@ -4,12 +4,13 @@ import enums.Category;
 
 import java.util.List;
 
-public class ChildrenUpdate {
+public final class ChildrenUpdate {
     private Integer id;
     private Double niceScore;
     private List<Category> giftsPreferences;
 
-    public ChildrenUpdate(final Integer id, final Double niceScore, final List<Category> giftsPreferences) {
+    public ChildrenUpdate(final Integer id, final Double niceScore,
+                          final List<Category> giftsPreferences) {
         this.id = id;
         this.niceScore = niceScore;
         this.giftsPreferences = giftsPreferences;
@@ -19,7 +20,7 @@ public class ChildrenUpdate {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -27,7 +28,7 @@ public class ChildrenUpdate {
         return niceScore;
     }
 
-    public void setNiceScore(Double niceScore) {
+    public void setNiceScore(final Double niceScore) {
         this.niceScore = niceScore;
     }
 
@@ -35,16 +36,7 @@ public class ChildrenUpdate {
         return giftsPreferences;
     }
 
-    public void setGiftsPreferences(List<Category> giftsPreferences) {
+    public void setGiftsPreferences(final List<Category> giftsPreferences) {
         this.giftsPreferences = giftsPreferences;
-    }
-
-    @Override
-    public String toString() {
-        return "ChildrenUpdate{" +
-                "id=" + id +
-                ", niceScore=" + niceScore +
-                ", giftsPreferences=" + giftsPreferences +
-                '}';
     }
 }

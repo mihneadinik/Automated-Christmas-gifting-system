@@ -58,6 +58,12 @@ public final class Database {
         this.giftsList = Utils.inputGiftListConverter(data);
     }
 
+    /**
+     * function that sets the annualChangeList by converting
+     * its inputData's object fields
+     * @param data the list of annual changes directly taken
+     * from the input -> has to be converted
+     */
     public void setAnnualChangeList(final List<AnnualChangesInputData> data) {
         for (AnnualChangesInputData currChange : data) {
             this.annualChangeList.add(new AnnualChange(currChange.getNewSantaBudget(),
@@ -106,10 +112,18 @@ public final class Database {
         return annualChangeList;
     }
 
-    public void addNewChild(Child newChild) {
+    /**
+     * function that adds a new child to the list
+     * @param newChild the new child to be added
+     */
+    public void addNewChild(final Child newChild) {
         this.childrenList.add(newChild);
     }
 
+    /**
+     * function that sorts the children list
+     * in increasing order by their id
+     */
     public void sortChildren() {
         this.childrenList.sort(new Comparator<Child>() {
             @Override

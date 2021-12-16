@@ -9,13 +9,12 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import utils.Utils;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputLoader {
+public final class InputLoader {
     /**
      * The path to the input file
      */
@@ -29,6 +28,11 @@ public class InputLoader {
         return inputPath;
     }
 
+    /**
+     * function that parses a JSON file for getting
+     * the needed input data
+     * @return the Input data for the current test
+     */
     public Input readData() {
         JSONParser jsonParser = new JSONParser();
         Integer numberOfYears = 0;
@@ -39,7 +43,6 @@ public class InputLoader {
 
         try {
             // Parsing the contents of the JSON file
-            // asta e obiectul mare din input
             JSONObject jsonObject = (JSONObject) jsonParser
                     .parse(new FileReader(inputPath));
             // un obiect pt initial date care contine 2 liste
@@ -48,28 +51,34 @@ public class InputLoader {
             JSONArray jsonGifts = (JSONArray) initialData.get(Constants.GIFTS);
             // un obiect pt schimbari
             JSONArray jsonAnnualChanges = (JSONArray) jsonObject.get(Constants.ANNUALCHANGES);
-
-            numberOfYears = ((Number)(jsonObject.get(Constants.NUMBEROFYEAR))).intValue();
-            santaBudget = ((Number)(jsonObject.get(Constants.SANTABUDGET))).doubleValue();
+            numberOfYears = ((Number) (jsonObject.get(Constants.NUMBEROFYEAR))).intValue();
+            santaBudget = ((Number) (jsonObject.get(Constants.SANTABUDGET))).doubleValue();
 
             if (jsonChildren != null) {
                 for (Object jsonChild : jsonChildren) {
-                    int id = ((Number)(((JSONObject) jsonChild).get(Constants.ID))).intValue();
-                    String lastname = (String)((JSONObject) jsonChild).get(Constants.LASTNAME);
-                    String firstname = (String)((JSONObject) jsonChild).get(Constants.FIRSTNAME);
-                    int age = ((Number)(((JSONObject) jsonChild).get(Constants.AGE))).intValue();
-                    Cities city = Utils.stringToCities((String)((JSONObject) jsonChild).get(Constants.CITY));
-                    Double niceScore = ((Number)(((JSONObject) jsonChild).get(Constants.NICESCORE))).doubleValue();
-                    List<Category> giftsPreferences = Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject) jsonChild).get(Constants.GIFTPREFERENCES));
-                    children.add(new ChildInputData(id, lastname, firstname, age, city, niceScore, giftsPreferences));
+                    int id = ((Number) (((JSONObject) jsonChild).get(Constants.ID))).intValue();
+                    String lastname = (String) ((JSONObject) jsonChild).get(Constants.LASTNAME);
+                    String firstname = (String) ((JSONObject) jsonChild).get(Constants.FIRSTNAME);
+                    int age = ((Number) (((JSONObject) jsonChild).get(Constants.AGE))).intValue();
+                    Cities city = Utils.stringToCities((String)
+                            ((JSONObject) jsonChild).get(Constants.CITY));
+                    Double niceScore = ((Number)
+                            (((JSONObject) jsonChild).get(Constants.NICESCORE))).doubleValue();
+                    List<Category> giftsPreferences = Utils.convertJSONArraytoCategory((JSONArray)
+                            ((JSONObject) jsonChild).get(Constants.GIFTPREFERENCES));
+                    children.add(new ChildInputData(id, lastname, firstname,
+                            age, city, niceScore, giftsPreferences));
                 }
             }
 
             if (jsonGifts != null) {
                 for (Object jsonGift : jsonGifts) {
-                    String productName = (String)((JSONObject) jsonGift).get(Constants.PRODUCTNAME);
-                    Double price = ((Number)(((JSONObject) jsonGift).get(Constants.PRICE))).doubleValue();
-                    Category category = Utils.stringToCategory((String)((JSONObject) jsonGift).get(Constants.CATEGORY));
+                    String productName = (String) ((JSONObject)
+                            jsonGift).get(Constants.PRODUCTNAME);
+                    Double price = ((Number) (((JSONObject)
+                            jsonGift).get(Constants.PRICE))).doubleValue();
+                    Category category = Utils.stringToCategory((String)
+                            ((JSONObject) jsonGift).get(Constants.CATEGORY));
                     gifts.add(new GiftsInputData(productName, price, category));
                 }
             }
@@ -78,11 +87,15 @@ public class InputLoader {
                 // citesc arrayul de updates obiect cu obiect
                 for (Object jsonChange : jsonAnnualChanges) {
                     // iau noul buget
-                    Double newSantaBudget = ((Number)(((JSONObject) jsonChange).get(Constants.NEWSANTABUDGET))).doubleValue();
+                    Double newSantaBudget = ((Number) (((JSONObject)
+                            jsonChange).get(Constants.NEWSANTABUDGET))).doubleValue();
                     // creez cate o lista pt fiecare element din updates
-                    JSONArray jsonNewGifts = (JSONArray) ((JSONObject) jsonChange).get(Constants.NEWGIFTS);
-                    JSONArray jsonNewChildren = (JSONArray) ((JSONObject) jsonChange).get(Constants.NEWCHILDREN);
-                    JSONArray jsonNewChildrenUpdate = (JSONArray) ((JSONObject) jsonChange).get(Constants.CHILDRENUPDATES);
+                    JSONArray jsonNewGifts = (JSONArray) ((JSONObject)
+                            jsonChange).get(Constants.NEWGIFTS);
+                    JSONArray jsonNewChildren = (JSONArray) ((JSONObject)
+                            jsonChange).get(Constants.NEWCHILDREN);
+                    JSONArray jsonNewChildrenUpdate = (JSONArray) ((JSONObject)
+                            jsonChange).get(Constants.CHILDRENUPDATES);
                     List<GiftsInputData> newGiftsList = new ArrayList<>();
                     List<ChildInputData> newChildrenList = new ArrayList<>();
                     List<ChildrenUpdateInputData> newChildrenUpdateList = new ArrayList<>();
@@ -90,9 +103,12 @@ public class InputLoader {
                     // verific daca am cadouri noi si le bag in lista cu cadouri noi
                     if (jsonNewGifts != null) {
                         for (Object newGift : jsonNewGifts) {
-                            String productName = (String)((JSONObject) newGift).get(Constants.PRODUCTNAME);
-                            Double price = ((Number)(((JSONObject) newGift).get(Constants.PRICE))).doubleValue();
-                            Category category = Utils.stringToCategory((String)((JSONObject) newGift).get(Constants.CATEGORY));
+                            String productName = (String) ((JSONObject)
+                                    newGift).get(Constants.PRODUCTNAME);
+                            Double price = ((Number) (((JSONObject)
+                                    newGift).get(Constants.PRICE))).doubleValue();
+                            Category category = Utils.stringToCategory((String) ((JSONObject)
+                                    newGift).get(Constants.CATEGORY));
                             newGiftsList.add(new GiftsInputData(productName, price, category));
                         }
                     } else {
@@ -102,14 +118,23 @@ public class InputLoader {
                     // verific daca am copii noi si ii bag in lista cu copii noi
                     if (jsonNewChildren != null) {
                         for (Object newChildren : jsonNewChildren) {
-                            int id = ((Number)(((JSONObject) newChildren).get(Constants.ID))).intValue();
-                            String lastname = (String)((JSONObject) newChildren).get(Constants.LASTNAME);
-                            String firstname = (String)((JSONObject) newChildren).get(Constants.FIRSTNAME);
-                            int age = ((Number)(((JSONObject) newChildren).get(Constants.AGE))).intValue();
-                            Cities city = Utils.stringToCities((String)((JSONObject) newChildren).get(Constants.CITY));
-                            Double niceScore = ((Number)(((JSONObject) newChildren).get(Constants.NICESCORE))).doubleValue();
-                            List<Category> giftsPreferences = Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject) newChildren).get(Constants.GIFTPREFERENCES));
-                            newChildrenList.add(new ChildInputData(id, lastname, firstname, age, city, niceScore, giftsPreferences));
+                            int id = ((Number) (((JSONObject)
+                                    newChildren).get(Constants.ID))).intValue();
+                            String lastname = (String) ((JSONObject)
+                                    newChildren).get(Constants.LASTNAME);
+                            String firstname = (String) ((JSONObject)
+                                    newChildren).get(Constants.FIRSTNAME);
+                            int age = ((Number) (((JSONObject)
+                                    newChildren).get(Constants.AGE))).intValue();
+                            Cities city = Utils.stringToCities((String) ((JSONObject)
+                                    newChildren).get(Constants.CITY));
+                            Double niceScore = ((Number) (((JSONObject)
+                                    newChildren).get(Constants.NICESCORE))).doubleValue();
+                            List<Category> giftsPreferences =
+                                    Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject)
+                                            newChildren).get(Constants.GIFTPREFERENCES));
+                            newChildrenList.add(new ChildInputData(id, lastname, firstname,
+                                    age, city, niceScore, giftsPreferences));
                         }
                     } else {
                         newChildrenList = null;
@@ -118,19 +143,26 @@ public class InputLoader {
                     // verific daca am updateuri noi pt copii si le bag in lista cu updateuri
                     if (jsonNewChildrenUpdate != null) {
                         for (Object newChildrenUpdate : jsonNewChildrenUpdate) {
-                            int id = ((Number)(((JSONObject) newChildrenUpdate).get(Constants.ID))).intValue();
+                            int id = ((Number) (((JSONObject)
+                                    newChildrenUpdate).get(Constants.ID))).intValue();
                             // avem grija la cazul in care nu se modifica nicescore
                             Double niceScore = null;
-                            if (((JSONObject) newChildrenUpdate).get(Constants.NICESCORE) != null) {
-                                niceScore = ((Number)(((JSONObject) newChildrenUpdate).get(Constants.NICESCORE))).doubleValue();
+                            if (((JSONObject) newChildrenUpdate).get(Constants.NICESCORE)
+                                    != null) {
+                                niceScore = ((Number) (((JSONObject)
+                                        newChildrenUpdate).get(Constants.NICESCORE))).doubleValue();
                             }
-                            List<Category> giftsPreferences = Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject) newChildrenUpdate).get(Constants.GIFTPREFERENCES));
-                            newChildrenUpdateList.add(new ChildrenUpdateInputData(id, niceScore, giftsPreferences));
+                            List<Category> giftsPreferences =
+                                    Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject)
+                                            newChildrenUpdate).get(Constants.GIFTPREFERENCES));
+                            newChildrenUpdateList.add(new
+                                    ChildrenUpdateInputData(id, niceScore, giftsPreferences));
                         }
                     } else {
                         newChildrenUpdateList = null;
                     }
-                    annualChanges.add(new AnnualChangesInputData(newSantaBudget, newGiftsList, newChildrenList, newChildrenUpdateList));
+                    annualChanges.add(new AnnualChangesInputData(newSantaBudget,
+                            newGiftsList, newChildrenList, newChildrenUpdateList));
                 }
             }
 

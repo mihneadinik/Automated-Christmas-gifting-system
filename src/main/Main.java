@@ -5,9 +5,7 @@ import common.Constants;
 import databases.Database;
 import fileio.Input;
 import fileio.InputLoader;
-import fileio.OutputModel;
 import fileio.Writer;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import simulation.SimulateYears;
 
@@ -83,11 +81,11 @@ public final class Main {
         Database.getInstance().setGiftsList(input.getGiftsData());
         Database.getInstance().setAnnualChangeList(input.getAnnualChangesData());
 
-        SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(), arrayResult, fileWriter);
+        SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(),
+                arrayResult);
         simulation.firstYear();
         simulation.nextYears();
 
         fileWriter.closeJSON(arrayResult);
-
     }
 }

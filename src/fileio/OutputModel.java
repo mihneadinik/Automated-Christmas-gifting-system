@@ -1,6 +1,5 @@
 package fileio;
 
-import common.Constants;
 import org.json.simple.JSONArray;
 
 public final class OutputModel {
