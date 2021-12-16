@@ -9,7 +9,7 @@ import org.json.simple.JSONObject;
 import java.util.List;
 
 public final class SimulateYears {
-    private YearData currYear; // observatorul meu
+    private YearData currYear;
     private List<AnnualChange> changes;
     private List<JSONObject> arrayResult;
 
@@ -77,5 +77,4 @@ public final class SimulateYears {
             Database.getInstance().sortChildren();
         }
     }
-
 }
