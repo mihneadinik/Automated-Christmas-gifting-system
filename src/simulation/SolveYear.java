@@ -1,7 +1,7 @@
 package simulation;
 
 import enums.Category;
-import fileio.OutputModel;
+import fileio.output.OutputModel;
 import objects.Child;
 import objects.Gift;
 import org.json.simple.JSONObject;
@@ -26,24 +26,24 @@ public final class SolveYear {
             Double childBudget = child.getSantaBudget();
             Map<Category, ArrayList<Gift>> giftsMap = Utils.convertGiftListToMap(
                     data.getYearGiftsList());
-            // cat timp copilul mai are bani
-            // parcurg fiecare preferinta sa vedem daca o putem gasi in lista mosului
+            // while the child has money for gifts
+            // check if Santa has the required gift
             for (Category preference : child.getGiftsPreference()) {
                 ArrayList<Gift> santasOptions = giftsMap.get(preference);
-                // daca mosul are acel cadou, il ia pe cel mai ieftin
+                // choose the cheapest gift
                 if (santasOptions.size() > 0) {
                     Gift option = santasOptions.get(0);
-                    // daca are bani, il cumpara si scade bugetul
+                    // if he can afford it, buy then update budget
                     if (childBudget > option.getPrice()) {
                         receivedGifts.add(option);
                         childBudget -= option.getPrice();
                     }
                 }
             }
-            // am terminat cu acest copil
+            // done with this child
             yearResult.add(createOutputModel(child, receivedGifts));
         }
-        // am terminat cu acest an
+        // done with this year
         JSONObject yearArray = new JSONObject();
         yearArray.put("children", yearResult);
         arrayResult.add(yearArray);

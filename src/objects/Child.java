@@ -79,20 +79,20 @@ public final class Child implements ChildUpdate {
      */
     @Override
     public void updateGiftsPreferences(final List<Category> newGifts) {
-        // creez o lista noua de preferinte
+        // creating a new preference list
         List<Category> newPreferenceList = new ArrayList<>();
-        // adaug fiecare preferinta noua si o scot din lista veche (daca exista)
+        // add every new preference and take it out from the old list
         for (Category category : newGifts) {
             this.giftsPreference.remove(category);
             if (!newPreferenceList.contains(category)) {
                 newPreferenceList.add(category);
             }
         }
-        // adaug in noua liste preferintele ramase
+        // add to the new list all the remaining preferences
         for (Category category : this.giftsPreference) {
             newPreferenceList.add(category);
         }
-        // actualizez lista
+        // updating the list
         this.giftsPreference = newPreferenceList;
     }
 
@@ -111,7 +111,7 @@ public final class Child implements ChildUpdate {
      */
     @Override
     public void computeAverageScore() {
-        // apelam strategia corespunzatoare varstei copilului
+        // calling the strategy depending on child's age
         AverageScoreStrategy strategy = StrategyFactory.createAverageScoreStrategy(this);
         if (strategy != null) {
             this.averageScore = strategy.computeAverageScore();

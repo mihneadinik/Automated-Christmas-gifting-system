@@ -1,8 +1,12 @@
-package fileio;
+package fileio.input;
 
 import common.Constants;
 import enums.Category;
 import enums.Cities;
+import fileio.inputdata.AnnualChangesInputData;
+import fileio.inputdata.ChildInputData;
+import fileio.inputdata.ChildrenUpdateInputData;
+import fileio.inputdata.GiftsInputData;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -72,32 +76,32 @@ public final class InputLoader {
         List<AnnualChangesInputData> annualChanges = new ArrayList<>();
 
         try {
-            // Parsez fisierul JSON de input
+            // parsing JSON input file
             JSONObject jsonObject = (JSONObject) jsonParser
                     .parse(new FileReader(inputPath));
-            // un obiect pt initial data care contine 2 liste
+            // object for initialData that contains 2 lists
             JSONObject initialData = (JSONObject) jsonObject.get(Constants.INITIALDATA);
             JSONArray jsonChildren = (JSONArray) initialData.get(Constants.CHILDREN);
             JSONArray jsonGifts = (JSONArray) initialData.get(Constants.GIFTS);
-            // un array pt schimbari
+            // an array for changes
             JSONArray jsonAnnualChanges = (JSONArray) jsonObject.get(Constants.ANNUALCHANGES);
             numberOfYears = ((Number) (jsonObject.get(Constants.NUMBEROFYEAR))).intValue();
             santaBudget = ((Number) (jsonObject.get(Constants.SANTABUDGET))).doubleValue();
 
-            if (jsonChildren != null) { // daca avem copii ii citim
+            if (jsonChildren != null) { // if there are children => read them
                     parseChildren(jsonChildren, children);
             }
 
-            if (jsonGifts != null) { // daca avem cadouri le citim
+            if (jsonGifts != null) { // if there are gifts => read them
                 parseGifts(jsonGifts, gifts);
             }
 
-            if (jsonAnnualChanges != null) { // daca avem update-uri le citim
+            if (jsonAnnualChanges != null) { // if there are updates => read them
                 for (Object jsonChange : jsonAnnualChanges) {
-                    // iau noul buget
+                    // taking the new budget
                     Double newSantaBudget = ((Number) (((JSONObject)
                             jsonChange).get(Constants.NEWSANTABUDGET))).doubleValue();
-                    // creez cate o lista pt fiecare element din updates
+                    // creating a list for each element in updates
                     JSONArray jsonNewGifts = (JSONArray) ((JSONObject)
                             jsonChange).get(Constants.NEWGIFTS);
                     JSONArray jsonNewChildren = (JSONArray) ((JSONObject)
@@ -108,26 +112,26 @@ public final class InputLoader {
                     List<ChildInputData> newChildrenList = new ArrayList<>();
                     List<ChildrenUpdateInputData> newChildrenUpdateList = new ArrayList<>();
 
-                    // verific daca am cadouri noi si le bag in lista cu cadouri noi
+                    // check for new gifts and add them to their list
                     if (jsonNewGifts != null) {
                         parseGifts(jsonNewGifts, newGiftsList);
                     } else {
                         newGiftsList = null;
                     }
 
-                    // verific daca am copii noi si ii bag in lista cu copii noi
+                    // check for new children and add them to their list
                     if (jsonNewChildren != null) {
                         parseChildren(jsonNewChildren, newChildrenList);
                     } else {
                         newChildrenList = null;
                     }
 
-                    // verific daca am update-uri noi pt copii si le bag in lista cu update-uri
+                    // check for new updates and add them to their list
                     if (jsonNewChildrenUpdate != null) {
                         for (Object newChildrenUpdate : jsonNewChildrenUpdate) {
                             int id = ((Number) (((JSONObject)
                                     newChildrenUpdate).get(Constants.ID))).intValue();
-                            // avem grija la cazul in care nu se modifica niceScore
+                            // careful if niceScore is not updated
                             Double niceScore = null;
                             if (((JSONObject) newChildrenUpdate).get(Constants.NICESCORE)
                                     != null) {

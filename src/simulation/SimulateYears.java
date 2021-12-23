@@ -38,7 +38,7 @@ public final class SimulateYears {
      */
     public void nextYears() {
         for (int i = 0; i < Database.getInstance().getNumberOfYears(); i++) {
-            // iau annual change ul curent si aplic actualizarile
+            // take the current annual change and apply its updates
             AnnualChange currChange = this.changes.get(i);
             eachYearUpdate(currChange);
             SolveYear.giveGifts(currYear, arrayResult);
@@ -46,17 +46,17 @@ public final class SimulateYears {
     }
 
     private void eachYearUpdate(final AnnualChange currChange) {
-        // actualizez lista de cadouri
+        // update the gifts list
         this.currYear.updateGiftsList(currChange.getNewGifts());
-        // a trecut un an => cresc varsta
+        // a year has passed => update children's age
         updateChildrenAge();
-        // pun copiii noi
+        // store the new children
         updateChildrenList(currChange.getNewChildren());
-        // refac lista de copii mici
+        // recreate the list with giftable children
         this.currYear.updateGiftableChildrenList();
-        // trebuie sa actualizez informatiile copiilor
+        // update children's info
         this.currYear.applyChildrenUpdate(currChange.getChildrenUpdate());
-        // pot actualiza bugetul odata ce am copii
+        // update the budget
         this.currYear.updateBudget(currChange.getNewSantaBudget());
     }
 
