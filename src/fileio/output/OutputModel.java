@@ -1,4 +1,4 @@
-package fileio;
+package fileio.output;
 
 import org.json.simple.JSONArray;
 

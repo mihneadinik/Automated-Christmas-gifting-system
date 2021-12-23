@@ -1,4 +1,8 @@
-package fileio;
+package fileio.input;
+
+import fileio.inputdata.AnnualChangesInputData;
+import fileio.inputdata.ChildInputData;
+import fileio.inputdata.GiftsInputData;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package fileio;
+package fileio.inputdata;
 
 import enums.Category;
 import enums.Cities;

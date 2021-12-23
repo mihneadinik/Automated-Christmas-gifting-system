@@ -3,9 +3,9 @@ package main;
 import checker.Checker;
 import common.Constants;
 import databases.Database;
-import fileio.Input;
-import fileio.InputLoader;
-import fileio.Writer;
+import fileio.input.Input;
+import fileio.input.InputLoader;
+import fileio.output.Writer;
 import org.json.simple.JSONObject;
 import simulation.SimulateYears;
 
@@ -75,7 +75,7 @@ public final class Main {
         Writer fileWriter = new Writer(filePath2);
         List<JSONObject> arrayResult = new ArrayList<>();
 
-        // introduc obiectele citite intr-o baza de date goala
+        // store the read objects in an empty database
         Database.getInstance().clearDatabase();
         Database.getInstance().setNumberOfYears(input.getNumberOfYears());
         Database.getInstance().setSantaBudget(input.getSantaBudget());
@@ -83,7 +83,7 @@ public final class Main {
         Database.getInstance().setGiftsList(input.getGiftsData());
         Database.getInstance().setAnnualChangeList(input.getAnnualChangesData());
 
-        // creez si rulez simularea
+        // running the simulation
         SimulateYears simulation = new SimulateYears(Database.getInstance().getAnnualChangeList(),
                 arrayResult);
         simulation.firstYear();

@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="final work">
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="update: checker correction">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/checker/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/checker/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/AnnualChangesInputData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildInputData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildrenUpdateInputData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/GiftsInputData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Input.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/OutputModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test12.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test15.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test20.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test22.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test24.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out_test9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checker/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databases/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databases/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/AnnualChangesInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildrenUpdateInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/GiftsInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/GiftsInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/input/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/input/InputLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/OutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/Writer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SimulateYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SimulateYears.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SolveYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SolveYear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +64,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/fileio/ChildInputData.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/fileio/InputLoader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/inputdata/ChildInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/input/InputLoader.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/inputdata/ChildrenUpdateInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/inputdata/AnnualChangesInputData.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/utils/Utils.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/fileio/Input.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/fileio/GiftsInputData.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/input/Input.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/fileio/inputdata/GiftsInputData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +92,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fileio.Output" />
+      <recent name="fileio.Input" />
+      <recent name="fileio.InputData" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -133,7 +137,8 @@
       <workItem from="1639612469904" duration="1564000" />
       <workItem from="1639647407884" duration="2303000" />
       <workItem from="1639659589464" duration="1960000" />
-      <workItem from="1639661723387" duration="783000" />
+      <workItem from="1639661723387" duration="917000" />
+      <workItem from="1640286138006" duration="6980000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639661542015</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update: checker correction">
+      <created>1639662631719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639662631719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +208,7 @@
     <MESSAGE value="remove sout" />
     <MESSAGE value="no coding style error, make comments prettier later" />
     <MESSAGE value="final work" />
-    <option name="LAST_COMMIT_MESSAGE" value="final work" />
+    <MESSAGE value="update: checker correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: checker correction" />
   </component>
 </project>

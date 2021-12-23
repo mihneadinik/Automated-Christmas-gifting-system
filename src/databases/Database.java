@@ -2,9 +2,9 @@ package databases;
 
 import common.Constants;
 import enums.Cities;
-import fileio.AnnualChangesInputData;
-import fileio.ChildInputData;
-import fileio.GiftsInputData;
+import fileio.inputdata.AnnualChangesInputData;
+import fileio.inputdata.ChildInputData;
+import fileio.inputdata.GiftsInputData;
 import objects.AnnualChange;
 import objects.Child;
 import objects.Gift;
