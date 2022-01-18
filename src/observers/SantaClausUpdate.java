@@ -1,5 +1,6 @@
 package observers;
 
+import enums.CityStrategyEnum;
 import objects.ChildrenUpdate;
 import objects.Gift;
 
@@ -39,4 +40,11 @@ public interface SantaClausUpdate {
      * score and santa's budgetUnit
      */
     void updateBudgetForChildren();
+
+    /**
+     * function that updates annually the
+     * strategy for giving gifts
+     * @param strategy new strategy
+     */
+    void updateStrategy(CityStrategyEnum strategy);
 }

@@ -1,5 +1,7 @@
 package fileio.inputdata;
 
+import enums.CityStrategyEnum;
+
 import java.util.List;
 
 public final class AnnualChangesInputData {
@@ -7,14 +9,16 @@ public final class AnnualChangesInputData {
     private List<GiftsInputData> newGifts;
     private List<ChildInputData> newChildren;
     private List<ChildrenUpdateInputData> childrenUpdate;
+    private CityStrategyEnum strategy;
 
     public AnnualChangesInputData(final Double newSantaBudget, final List<GiftsInputData> newGifts,
                                   final List<ChildInputData> newChildren,
-                                  final List<ChildrenUpdateInputData> childrenUpdate) {
+                                  final List<ChildrenUpdateInputData> childrenUpdate, final CityStrategyEnum strategy) {
         this.newSantaBudget = newSantaBudget;
         this.newGifts = newGifts;
         this.newChildren = newChildren;
         this.childrenUpdate = childrenUpdate;
+        this.strategy = strategy;
     }
 
     public Double getNewSantaBudget() {
@@ -47,5 +51,13 @@ public final class AnnualChangesInputData {
 
     public void setChildrenUpdate(final List<ChildrenUpdateInputData> childrenUpdate) {
         this.childrenUpdate = childrenUpdate;
+    }
+
+    public CityStrategyEnum getStrategy() {
+        return strategy;
+    }
+
+    public void setStrategy(CityStrategyEnum strategy) {
+        this.strategy = strategy;
     }
 }

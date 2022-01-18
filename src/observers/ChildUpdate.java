@@ -1,6 +1,7 @@
 package observers;
 
 import enums.Category;
+import enums.ElvesType;
 
 import java.util.List;
 
@@ -37,4 +38,11 @@ public interface ChildUpdate {
      * the average score
      */
     void updateSantaBudget(Double budgetUnit);
+
+    /**
+     * function that updates the Elf
+     * allocated for each child
+     * @param elf new Elf
+     */
+    void updateElf(ElvesType elf);
 }

@@ -9,7 +9,7 @@ public final class StrategyFactory {
     }
 
     /**
-     * function that return the proper strategy for computing
+     * function that returns the proper strategy for computing
      * the average score for a certain child
      * @param child the child for whom I have to compute
      * the average score

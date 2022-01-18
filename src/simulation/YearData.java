@@ -2,10 +2,13 @@ package simulation;
 
 import common.Constants;
 import databases.Database;
+import enums.CityStrategyEnum;
 import objects.Child;
 import objects.ChildrenUpdate;
 import objects.Gift;
 import observers.SantaClausUpdate;
+import strategies.giftingStrategy.ChildSortingStrategy;
+import strategies.giftingStrategy.StrategyFactory;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,12 +18,14 @@ public final class YearData implements SantaClausUpdate {
     private List<Gift> yearGiftsList;
     private List<Child> yearGiftableChildren;
     private Double budgetUnit;
+    private CityStrategyEnum yearStrategy;
 
     public YearData(final Double yearBudget, final List<Gift> yearGiftsList,
                     final List<Child> yearGiftableChildren) {
         this.yearBudget = yearBudget;
         this.yearGiftsList = yearGiftsList;
         this.yearGiftableChildren = yearGiftableChildren;
+        this.yearStrategy = CityStrategyEnum.ID;
     }
 
     /**
@@ -92,6 +97,7 @@ public final class YearData implements SantaClausUpdate {
             if (currChild != null) {
                 currChild.updateNiceScore(currUpdate.getNiceScore());
                 currChild.updateGiftsPreferences(currUpdate.getGiftsPreferences());
+                currChild.updateElf(currUpdate.getElf());
             }
         }
     }
@@ -105,6 +111,16 @@ public final class YearData implements SantaClausUpdate {
         for (Child child : this.yearGiftableChildren) {
             child.updateSantaBudget(this.budgetUnit);
         }
+    }
+
+    /**
+     * function that changes the strategy by which gifts
+     * are given to children
+     * @param strategy new strategy
+     */
+    @Override
+    public void updateStrategy(CityStrategyEnum strategy) {
+        this.yearStrategy = strategy;
     }
 
     private Child getChildById(final Integer id) {
@@ -132,6 +148,11 @@ public final class YearData implements SantaClausUpdate {
         });
     }
 
+    public void sortChildren() {
+        ChildSortingStrategy strategy = StrategyFactory.createChildSortingStrategy(this);
+        this.yearGiftableChildren = strategy.sortChildren();
+    }
+
     public Double getYearBudget() {
         return yearBudget;
     }
@@ -146,5 +167,29 @@ public final class YearData implements SantaClausUpdate {
 
     public Double getBudgetUnit() {
         return budgetUnit;
+    }
+
+    public void setYearBudget(Double yearBudget) {
+        this.yearBudget = yearBudget;
+    }
+
+    public void setYearGiftsList(List<Gift> yearGiftsList) {
+        this.yearGiftsList = yearGiftsList;
+    }
+
+    public void setYearGiftableChildren(List<Child> yearGiftableChildren) {
+        this.yearGiftableChildren = yearGiftableChildren;
+    }
+
+    public void setBudgetUnit(Double budgetUnit) {
+        this.budgetUnit = budgetUnit;
+    }
+
+    public CityStrategyEnum getYearStrategy() {
+        return yearStrategy;
+    }
+
+    public void setYearStrategy(CityStrategyEnum yearStrategy) {
+        this.yearStrategy = yearStrategy;
     }
 }

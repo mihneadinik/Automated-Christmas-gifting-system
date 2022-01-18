@@ -20,12 +20,13 @@ public final class SolveYear {
      */
     public static void giveGifts(final YearData data, final List<JSONObject> arrayResult) {
         List<OutputModel> yearResult = new ArrayList<>();
+        Map<Category, ArrayList<Gift>> giftsMap = Utils.convertGiftListToMap(
+                data.getYearGiftsList());
         for (Child child : data.getYearGiftableChildren()) {
             // solve
             List<Gift> receivedGifts = new ArrayList<>();
             Double childBudget = child.getSantaBudget();
-            Map<Category, ArrayList<Gift>> giftsMap = Utils.convertGiftListToMap(
-                    data.getYearGiftsList());
+
             // while the child has money for gifts
             // check if Santa has the required gift
             for (Category preference : child.getGiftsPreference()) {
