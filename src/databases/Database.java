@@ -69,7 +69,8 @@ public final class Database {
             this.annualChangeList.add(new AnnualChange(currChange.getNewSantaBudget(),
                     Utils.inputGiftListConverter(currChange.getNewGifts()),
                     Utils.inputChildListConverter(currChange.getNewChildren()),
-                    Utils.inputChildrenUpdateListConverter(currChange.getChildrenUpdate()), currChange.getStrategy()));
+                    Utils.inputChildrenUpdateListConverter(currChange.getChildrenUpdate()),
+                    currChange.getStrategy()));
         }
     }
 

@@ -13,7 +13,8 @@ public final class AnnualChangesInputData {
 
     public AnnualChangesInputData(final Double newSantaBudget, final List<GiftsInputData> newGifts,
                                   final List<ChildInputData> newChildren,
-                                  final List<ChildrenUpdateInputData> childrenUpdate, final CityStrategyEnum strategy) {
+                                  final List<ChildrenUpdateInputData> childrenUpdate,
+                                  final CityStrategyEnum strategy) {
         this.newSantaBudget = newSantaBudget;
         this.newGifts = newGifts;
         this.newChildren = newChildren;
@@ -57,7 +58,7 @@ public final class AnnualChangesInputData {
         return strategy;
     }
 
-    public void setStrategy(CityStrategyEnum strategy) {
+    public void setStrategy(final CityStrategyEnum strategy) {
         this.strategy = strategy;
     }
 }

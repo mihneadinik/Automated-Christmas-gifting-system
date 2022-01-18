@@ -5,17 +5,22 @@ import objects.Child;
 import java.util.Comparator;
 import java.util.List;
 
-public class NiceScoreStrategy implements ChildSortingStrategy{
+public final class NiceScoreStrategy implements ChildSortingStrategy {
     private final List<Child> unsortedList;
 
     public NiceScoreStrategy(final List<Child> unsortedList) {
         this.unsortedList = unsortedList;
     }
+
+    /**
+     * @return sorted list of children based on
+     * their niceScores and id
+     */
     @Override
     public List<Child> sortChildren() {
         this.unsortedList.sort(new Comparator<Child>() {
             @Override
-            public int compare(Child ch1, Child ch2) {
+            public int compare(final Child ch1, final Child ch2) {
                 double dif = ch1.getAverageScore() - ch2.getAverageScore();
                 if (dif < 0) {
                     return -1;

@@ -1,7 +1,6 @@
 package strategies.giftingStrategy;
 
 import simulation.YearData;
-import enums.CityStrategyEnum;
 
 public final class StrategyFactory {
 

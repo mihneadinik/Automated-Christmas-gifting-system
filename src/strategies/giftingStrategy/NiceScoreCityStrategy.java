@@ -3,16 +3,20 @@ package strategies.giftingStrategy;
 import enums.Cities;
 import objects.Child;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Comparator;
 
-public class NiceScoreCityStrategy implements ChildSortingStrategy{
+public final class NiceScoreCityStrategy implements ChildSortingStrategy {
     private final List<Child> unsortedList;
 
-    public NiceScoreCityStrategy(List<Child> unsortedList) {
+    public NiceScoreCityStrategy(final List<Child> unsortedList) {
         this.unsortedList = unsortedList;
     }
 
-    private Map<Cities, List<Child>> CityChildMapGenerator() {
+    private Map<Cities, List<Child>> cityChildMapGenerator() {
         Map<Cities, List<Child>> toReturn = new HashMap<>();
         toReturn.put(Cities.BRAILA, new ArrayList<Child>());
         toReturn.put(Cities.BRASOV, new ArrayList<Child>());
@@ -28,12 +32,16 @@ public class NiceScoreCityStrategy implements ChildSortingStrategy{
         return toReturn;
     }
 
+    /**
+     * @return sorted list of children based on
+     * the cities they live in averageScore
+     */
     @Override
     public List<Child> sortChildren() {
         List<Child> sortedList = new ArrayList<>();
         // first map city to children
         // create the map
-        Map<Cities, List<Child>> cityToChild = CityChildMapGenerator();
+        Map<Cities, List<Child>> cityToChild = cityChildMapGenerator();
         // add children to map
         for (Child child : this.unsortedList) {
             cityToChild.get(child.getCity()).add(child);
@@ -42,7 +50,7 @@ public class NiceScoreCityStrategy implements ChildSortingStrategy{
         for (Map.Entry entry : cityToChild.entrySet()) {
             ((List<Child>) entry.getValue()).sort(new Comparator<Child>() {
                 @Override
-                public int compare(Child ch1, Child ch2) {
+                public int compare(final Child ch1, final Child ch2) {
                     return ch1.getId() - ch2.getId();
                 }
             });
@@ -55,8 +63,9 @@ public class NiceScoreCityStrategy implements ChildSortingStrategy{
             for (Child child : (List<Child>) (entry.getValue())) {
                 avgScoreTotal += child.getAverageScore();
             }
-            if (((List<Child>) (entry.getValue())).size() != 0)
+            if (((List<Child>) (entry.getValue())).size() != 0) {
                 avgScoreTotal /= ((List<Child>) (entry.getValue())).size();
+            }
             averageScoreCities.put((Cities) (entry.getKey()), avgScoreTotal);
         }
         // sort cities
@@ -73,7 +82,8 @@ public class NiceScoreCityStrategy implements ChildSortingStrategy{
             // check for duplicate cities
             for (Map.Entry entry : averageScoreCities.entrySet()) {
                 if (((Double) entry.getValue()).equals(max)) {
-                    if (nicestCity.toString().toLowerCase().compareTo(((Cities) (entry.getKey())).toString().toLowerCase()) > 0) { // poate trb pus >
+                    if (nicestCity.toString().toLowerCase().compareTo(((Cities)
+                            (entry.getKey())).toString().toLowerCase()) > 0) { // poate trb pus >
                         nicestCity = (Cities) (entry.getKey());
                     }
                 }

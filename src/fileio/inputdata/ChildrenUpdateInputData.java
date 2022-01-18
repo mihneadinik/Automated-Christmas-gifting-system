@@ -47,7 +47,7 @@ public final class ChildrenUpdateInputData {
         return elf;
     }
 
-    public void setElf(ElvesType elf) {
+    public void setElf(final ElvesType elf) {
         this.elf = elf;
     }
 }

@@ -119,7 +119,7 @@ public final class YearData implements SantaClausUpdate {
      * @param strategy new strategy
      */
     @Override
-    public void updateStrategy(CityStrategyEnum strategy) {
+    public void updateStrategy(final CityStrategyEnum strategy) {
         this.yearStrategy = strategy;
     }
 
@@ -148,6 +148,10 @@ public final class YearData implements SantaClausUpdate {
         });
     }
 
+    /**
+     * Function that sorts the annual giftable children list
+     * by the strategy type received in that year
+     */
     public void sortChildren() {
         ChildSortingStrategy strategy = StrategyFactory.createChildSortingStrategy(this);
         this.yearGiftableChildren = strategy.sortChildren();
@@ -169,19 +173,19 @@ public final class YearData implements SantaClausUpdate {
         return budgetUnit;
     }
 
-    public void setYearBudget(Double yearBudget) {
+    public void setYearBudget(final Double yearBudget) {
         this.yearBudget = yearBudget;
     }
 
-    public void setYearGiftsList(List<Gift> yearGiftsList) {
+    public void setYearGiftsList(final List<Gift> yearGiftsList) {
         this.yearGiftsList = yearGiftsList;
     }
 
-    public void setYearGiftableChildren(List<Child> yearGiftableChildren) {
+    public void setYearGiftableChildren(final List<Child> yearGiftableChildren) {
         this.yearGiftableChildren = yearGiftableChildren;
     }
 
-    public void setBudgetUnit(Double budgetUnit) {
+    public void setBudgetUnit(final Double budgetUnit) {
         this.budgetUnit = budgetUnit;
     }
 
@@ -189,7 +193,7 @@ public final class YearData implements SantaClausUpdate {
         return yearStrategy;
     }
 
-    public void setYearStrategy(CityStrategyEnum yearStrategy) {
+    public void setYearStrategy(final CityStrategyEnum yearStrategy) {
         this.yearStrategy = yearStrategy;
     }
 }

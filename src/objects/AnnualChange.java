@@ -1,6 +1,5 @@
 package objects;
 
-import enums.Cities;
 import enums.CityStrategyEnum;
 
 import java.util.List;
@@ -13,7 +12,8 @@ public final class AnnualChange {
     private CityStrategyEnum strategy;
 
     public AnnualChange(final Double newSantaBudget, final List<Gift> newGifts,
-                        final List<Child> newChildren, final List<ChildrenUpdate> childrenUpdate, final CityStrategyEnum strategy) {
+                        final List<Child> newChildren, final List<ChildrenUpdate> childrenUpdate,
+                        final CityStrategyEnum strategy) {
         this.newSantaBudget = newSantaBudget;
         this.newGifts = newGifts;
         this.newChildren = newChildren;
@@ -57,7 +57,7 @@ public final class AnnualChange {
         return strategy;
     }
 
-    public void setStrategy(CityStrategyEnum strategy) {
+    public void setStrategy(final CityStrategyEnum strategy) {
         this.strategy = strategy;
     }
 }

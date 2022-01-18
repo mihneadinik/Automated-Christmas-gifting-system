@@ -32,7 +32,8 @@ public final class Utils {
         List<Gift> outList = new ArrayList<>();
 
         for (GiftsInputData data : list) {
-            outList.add(new Gift(data.getProductName(), data.getPrice(), data.getCategory(), data.getQuantity()));
+            outList.add(new Gift(data.getProductName(), data.getPrice(),
+                    data.getCategory(), data.getQuantity()));
         }
 
         return outList;

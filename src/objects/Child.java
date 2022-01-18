@@ -5,8 +5,8 @@ import enums.Category;
 import enums.Cities;
 import enums.ElvesType;
 import observers.ChildUpdate;
-import strategies.AverageScoreStrategy;
-import strategies.StrategyFactory;
+import strategies.averageScoreStrategy.AverageScoreStrategy;
+import strategies.averageScoreStrategy.StrategyFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,8 @@ public final class Child implements ChildUpdate {
 
     public Child(final Integer id, final String lastname, final String firstname,
                  final Integer age, final Cities city, final Double niceScore,
-                 final List<Category> giftsPreference, final Double niceScoreBonus, final ElvesType elf) {
+                 final List<Category> giftsPreference,
+                 final Double niceScoreBonus, final ElvesType elf) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -122,9 +123,9 @@ public final class Child implements ChildUpdate {
         AverageScoreStrategy strategy = StrategyFactory.createAverageScoreStrategy(this);
         if (strategy != null) {
             this.averageScore = strategy.computeAverageScore();
-            this.averageScore += this.averageScore * this.niceScoreBonus / 100;
-            if (this.averageScore > 10) {
-                this.averageScore = 10.0;
+            this.averageScore += this.averageScore * this.niceScoreBonus / Constants.HUNDRED;
+            if (this.averageScore > Constants.AVERAGESCOREBOUND) {
+                this.averageScore = Constants.AVERAGESCOREBOUND;
             }
         }
     }
@@ -137,10 +138,10 @@ public final class Child implements ChildUpdate {
     public void updateSantaBudget(final Double budgetUnit) {
         this.santaBudget = budgetUnit * this.averageScore;
         if (this.elf.equals(ElvesType.BLACK)) {
-            this.santaBudget -= this.santaBudget * 30 / 100;
+            this.santaBudget -= this.santaBudget * Constants.ELFVALUE / Constants.HUNDRED;
         }
         if (this.elf.equals(ElvesType.PINK)) {
-            this.santaBudget += this.santaBudget * 30 / 100;
+            this.santaBudget += this.santaBudget * Constants.ELFVALUE / Constants.HUNDRED;
         }
     }
 
@@ -148,8 +149,8 @@ public final class Child implements ChildUpdate {
      * function that changes the elf of a child annually
      */
     @Override
-    public void updateElf(ElvesType elf) {
-        this.elf = elf;
+    public void updateElf(final ElvesType newElf) {
+        this.elf = newElf;
     }
 
     private void computeType() {
@@ -268,7 +269,7 @@ public final class Child implements ChildUpdate {
         return niceScoreBonus;
     }
 
-    public void setNiceScoreBonus(Double niceScoreBonus) {
+    public void setNiceScoreBonus(final Double niceScoreBonus) {
         this.niceScoreBonus = niceScoreBonus;
     }
 
@@ -276,7 +277,7 @@ public final class Child implements ChildUpdate {
         return elf;
     }
 
-    public void setElf(ElvesType elf) {
+    public void setElf(final ElvesType elf) {
         this.elf = elf;
     }
 }

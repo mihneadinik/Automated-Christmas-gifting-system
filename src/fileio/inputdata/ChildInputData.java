@@ -19,7 +19,8 @@ public final class ChildInputData {
 
     public ChildInputData(final Integer id, final String lastname, final String firstname,
                           final Integer age, final Cities city, final Double niceScore,
-                          final List<Category> giftsPreference, final Double niceScoreBonus, final ElvesType elf) {
+                          final List<Category> giftsPreference, final Double niceScoreBonus,
+                          final ElvesType elf) {
         this.id = id;
         this.lastname = lastname;
         this.firstname = firstname;
@@ -91,7 +92,7 @@ public final class ChildInputData {
         return niceScoreBonus;
     }
 
-    public void setNiceScoreBonus(Double niceScoreBonus) {
+    public void setNiceScoreBonus(final Double niceScoreBonus) {
         this.niceScoreBonus = niceScoreBonus;
     }
 
@@ -99,7 +100,7 @@ public final class ChildInputData {
         return elf;
     }
 
-    public void setElf(ElvesType elf) {
+    public void setElf(final ElvesType elf) {
         this.elf = elf;
     }
 }
