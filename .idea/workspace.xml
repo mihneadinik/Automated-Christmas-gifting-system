@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="Solved checkstyle errors and reorganised files">
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="Implemented the functionality, having some errors though">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/AverageScoreStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/BabyStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/KidStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/StrategyFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/TeenStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/SimulateYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SimulateYears.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SimulateYears.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SimulateYears.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation/SolveYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SolveYear.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation/YearData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/YearData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <workItem from="1641810349955" duration="45000" />
       <workItem from="1642491495623" duration="6903000" />
       <workItem from="1642531058089" duration="11624000" />
-      <workItem from="1642589152768" duration="3850000" />
+      <workItem from="1642589152768" duration="6631000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -190,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642543061972</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implemented the functionality, having some errors though">
+      <created>1642593074056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642593074056</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +223,7 @@
     <MESSAGE value="final work and readme" />
     <MESSAGE value="Recreated the input related classes, added strategies for giving gifts" />
     <MESSAGE value="Solved checkstyle errors and reorganised files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved checkstyle errors and reorganised files" />
+    <MESSAGE value="Implemented the functionality, having some errors though" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the functionality, having some errors though" />
   </component>
 </project>

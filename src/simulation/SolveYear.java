@@ -34,14 +34,6 @@ public final class SolveYear {
             for (Category preference : child.getGiftsPreference()) {
                 ArrayList<Gift> santasOptions = giftsMap.get(preference);
                 // choose the cheapest gift
-//                if (santasOptions.size() > 0) {
-//                    Gift option = santasOptions.get(0);
-//                    // if he can afford it, buy then update budget
-//                    if (childBudget > option.getPrice() && option.getQuantity() > 0) {
-//                        receivedGifts.add(option);
-//                        childBudget -= option.getPrice();
-//                    }
-//                }
                 for (Gift option : santasOptions) {
                     if (childBudget > option.getPrice()) {
                         if (option.getQuantity() > 0) {
@@ -55,31 +47,37 @@ public final class SolveYear {
                     }
                 }
             }
-            // if child has received no gifts, but has yellow elf
-            if (receivedGifts.isEmpty() && child.getElf().equals(ElvesType.YELLOW)) {
-                for (Category preference : child.getGiftsPreference()) {
-                    ArrayList<Gift> santasOptions = giftsMap.get(preference);
-                    // choose the cheapest gift
-                    if (santasOptions.size() > 0) {
-                        Gift option = santasOptions.get(0);
-                        // if he can afford it, buy then update budget
-                        if (childBudget > option.getPrice() && option.getQuantity() > 0) {
-                            receivedGifts.add(option);
-                            option.setQuantity(option.getQuantity() - 1);
-                        }
-                    }
-                }
-            }
+
             // done with this child
             yearResult.add(createOutputModel(child, receivedGifts));
         }
-        // done with this year
+        // done with this year => sort the list by ID
         yearResult.sort(new Comparator<OutputModel>() {
             @Override
             public int compare(final OutputModel o1, final OutputModel o2) {
                 return o1.getId() - o2.getId();
             }
         });
+        // if child has received no gifts, but has yellow elf
+        for (OutputModel child : yearResult) {
+            Child referenceChild = data.getChildById(child.getId());
+            if (child.getReceivedGifts().isEmpty() && referenceChild.getElf()
+                    .equals(ElvesType.YELLOW)) {
+                ArrayList<Gift> santasOptions = giftsMap.get(referenceChild
+                        .getGiftsPreference().get(0));
+                // choose the cheapest gift
+                if (santasOptions.size() > 0) {
+                    Gift option = santasOptions.get(0);
+                    // if gift exists => give
+                    if (option.getQuantity() > 0) {
+                        List<Gift> toStore = new ArrayList<>();
+                        toStore.add(option);
+                        child.setReceivedGifts(Utils.giftsToJsonArray(toStore));
+                        option.setQuantity(option.getQuantity() - 1);
+                    }
+                }
+            }
+        }
         JSONObject yearArray = new JSONObject();
         yearArray.put("children", yearResult);
         arrayResult.add(yearArray);

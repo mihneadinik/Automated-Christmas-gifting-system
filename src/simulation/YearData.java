@@ -123,7 +123,13 @@ public final class YearData implements SantaClausUpdate {
         this.yearStrategy = strategy;
     }
 
-    private Child getChildById(final Integer id) {
+    /**
+     * function that searches through the list of
+     * giftable children to find a certain kid
+     * @param id the id to look for
+     * @return child or null if it doesn't exist
+     */
+    public Child getChildById(final Integer id) {
         for (Child child : this.yearGiftableChildren) {
             if (child.getId().equals(id)) {
                 return child;
