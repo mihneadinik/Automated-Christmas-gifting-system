@@ -21,7 +21,7 @@ public final class NiceScoreStrategy implements ChildSortingStrategy {
         this.unsortedList.sort(new Comparator<Child>() {
             @Override
             public int compare(final Child ch1, final Child ch2) {
-                double dif = ch1.getAverageScore() - ch2.getAverageScore();
+                double dif = ch2.getAverageScore() - ch1.getAverageScore();
                 if (dif < 0) {
                     return -1;
                 }

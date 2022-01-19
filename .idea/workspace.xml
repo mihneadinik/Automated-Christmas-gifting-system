@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="Recreated the input related classes, added strategies for giving gifts">
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="Solved checkstyle errors and reorganised files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/databases/Database$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/databases/Database$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/objects/Gift.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/objects/Gift.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/YearData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databases/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databases/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/inputdata/AnnualChangesInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/AnnualChangesInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/inputdata/ChildInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/inputdata/ChildrenUpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildrenUpdateInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/inputdata/GiftsInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/GiftsInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/AnnualChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/AnnualChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/AverageScoreStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/BabyStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/KidStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/StrategyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proiect1/strategies/TeenStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ChildrenUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ChildrenUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Gift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Gift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SimulateYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SimulateYears.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/SolveYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SolveYear.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulation/YearData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/YearData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/AverageScoreStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/averageScoreStrategy/AverageScoreStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/BabyStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/averageScoreStrategy/BabyStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/KidStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/averageScoreStrategy/KidStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/StrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/averageScoreStrategy/StrategyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/TeenStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/averageScoreStrategy/TeenStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/giftingStrategy/IdStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/giftingStrategy/IdStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreCityStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreCityStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/giftingStrategy/NiceScoreStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategies/giftingStrategy/StrategyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategies/giftingStrategy/StrategyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="strategies.averageScoreStrategy" />
       <recent name="fileio.Output" />
       <recent name="fileio.Input" />
       <recent name="fileio.InputData" />
@@ -142,7 +124,8 @@
       <workItem from="1640293724403" duration="511000" />
       <workItem from="1641810349955" duration="45000" />
       <workItem from="1642491495623" duration="6903000" />
-      <workItem from="1642531058089" duration="11153000" />
+      <workItem from="1642531058089" duration="11624000" />
+      <workItem from="1642589152768" duration="3850000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -200,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642541774745</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Solved checkstyle errors and reorganised files">
+      <created>1642543061972</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642543061972</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +219,7 @@
     <MESSAGE value="update: checker correction" />
     <MESSAGE value="final work and readme" />
     <MESSAGE value="Recreated the input related classes, added strategies for giving gifts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recreated the input related classes, added strategies for giving gifts" />
+    <MESSAGE value="Solved checkstyle errors and reorganised files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved checkstyle errors and reorganised files" />
   </component>
 </project>

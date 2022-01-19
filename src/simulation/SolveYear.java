@@ -1,6 +1,7 @@
 package simulation;
 
 import enums.Category;
+import enums.ElvesType;
 import fileio.output.OutputModel;
 import objects.Child;
 import objects.Gift;
@@ -8,6 +9,7 @@ import org.json.simple.JSONObject;
 import utils.Utils;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -32,12 +34,39 @@ public final class SolveYear {
             for (Category preference : child.getGiftsPreference()) {
                 ArrayList<Gift> santasOptions = giftsMap.get(preference);
                 // choose the cheapest gift
-                if (santasOptions.size() > 0) {
-                    Gift option = santasOptions.get(0);
-                    // if he can afford it, buy then update budget
+//                if (santasOptions.size() > 0) {
+//                    Gift option = santasOptions.get(0);
+//                    // if he can afford it, buy then update budget
+//                    if (childBudget > option.getPrice() && option.getQuantity() > 0) {
+//                        receivedGifts.add(option);
+//                        childBudget -= option.getPrice();
+//                    }
+//                }
+                for (Gift option : santasOptions) {
                     if (childBudget > option.getPrice()) {
-                        receivedGifts.add(option);
-                        childBudget -= option.getPrice();
+                        if (option.getQuantity() > 0) {
+                            receivedGifts.add(option);
+                            childBudget -= option.getPrice();
+                            option.setQuantity(option.getQuantity() - 1);
+                            break;
+                        }
+                    } else {
+                        break;
+                    }
+                }
+            }
+            // if child has received no gifts, but has yellow elf
+            if (receivedGifts.isEmpty() && child.getElf().equals(ElvesType.YELLOW)) {
+                for (Category preference : child.getGiftsPreference()) {
+                    ArrayList<Gift> santasOptions = giftsMap.get(preference);
+                    // choose the cheapest gift
+                    if (santasOptions.size() > 0) {
+                        Gift option = santasOptions.get(0);
+                        // if he can afford it, buy then update budget
+                        if (childBudget > option.getPrice() && option.getQuantity() > 0) {
+                            receivedGifts.add(option);
+                            option.setQuantity(option.getQuantity() - 1);
+                        }
                     }
                 }
             }
@@ -45,6 +74,12 @@ public final class SolveYear {
             yearResult.add(createOutputModel(child, receivedGifts));
         }
         // done with this year
+        yearResult.sort(new Comparator<OutputModel>() {
+            @Override
+            public int compare(final OutputModel o1, final OutputModel o2) {
+                return o1.getId() - o2.getId();
+            }
+        });
         JSONObject yearArray = new JSONObject();
         yearArray.put("children", yearResult);
         arrayResult.add(yearArray);

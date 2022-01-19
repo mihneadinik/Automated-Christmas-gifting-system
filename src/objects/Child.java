@@ -77,7 +77,7 @@ public final class Child implements ChildUpdate {
         if (newNiceScore != null) {
             this.niceScore = newNiceScore;
             this.scoreHistory.add(niceScore);
-//            computeAverageScore();
+            computeAverageScore();
         }
     }
 

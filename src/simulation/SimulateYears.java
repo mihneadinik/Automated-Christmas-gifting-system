@@ -49,14 +49,14 @@ public final class SimulateYears {
     private void eachYearUpdate(final AnnualChange currChange) {
         // update the gifts list
         this.currYear.updateGiftsList(currChange.getNewGifts());
-        // store the new children
-        updateChildrenList(currChange.getNewChildren());
-        // update children's info
-        this.currYear.applyChildrenUpdate(currChange.getChildrenUpdate());
         // a year has passed => update children's age
         updateChildrenAge();
+        // store the new children
+        updateChildrenList(currChange.getNewChildren());
         // recreate the list with giftable children
         this.currYear.updateGiftableChildrenList();
+        // update children's info
+        this.currYear.applyChildrenUpdate(currChange.getChildrenUpdate());
         // update the budget
         this.currYear.updateBudget(currChange.getNewSantaBudget());
         // update year's strategy

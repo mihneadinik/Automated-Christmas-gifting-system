@@ -95,9 +95,9 @@ public final class YearData implements SantaClausUpdate {
         for (ChildrenUpdate currUpdate : updates) {
             Child currChild = getChildById(currUpdate.getId());
             if (currChild != null) {
+                currChild.updateElf(currUpdate.getElf());
                 currChild.updateNiceScore(currUpdate.getNiceScore());
                 currChild.updateGiftsPreferences(currUpdate.getGiftsPreferences());
-                currChild.updateElf(currUpdate.getElf());
             }
         }
     }
