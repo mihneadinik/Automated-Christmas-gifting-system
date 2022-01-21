@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="update: checker correction">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="d662010a-d6c5-4bb5-92a6-5b13c2206c94" name="Changes" comment="final edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/checker/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/checker/Checker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/common/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/databases/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/AnnualChangesInputData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildInputData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/ChildrenUpdateInputData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/GiftsInputData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/InputLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/OutputModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/fileio/Writer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/simulation/SolveYear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proiect1/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databases/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databases/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/AnnualChangesInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/AnnualChangesInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/ChildInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/ChildrenUpdateInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/ChildrenUpdateInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/GiftsInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/inputdata/GiftsInputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/input/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/InputLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/input/InputLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/OutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/OutputModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileio/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileio/output/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/SimulateYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SimulateYears.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/SolveYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/SolveYear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="startStage2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,6 +66,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="strategies.averageScoreStrategy" />
       <recent name="fileio.Output" />
       <recent name="fileio.Input" />
       <recent name="fileio.InputData" />
@@ -138,7 +110,15 @@
       <workItem from="1639647407884" duration="2303000" />
       <workItem from="1639659589464" duration="1960000" />
       <workItem from="1639661723387" duration="917000" />
-      <workItem from="1640286138006" duration="6980000" />
+      <workItem from="1640286138006" duration="7215000" />
+      <workItem from="1640293724403" duration="511000" />
+      <workItem from="1641810349955" duration="45000" />
+      <workItem from="1642491495623" duration="6903000" />
+      <workItem from="1642531058089" duration="11624000" />
+      <workItem from="1642589152768" duration="6665000" />
+      <workItem from="1642623708849" duration="2299000" />
+      <workItem from="1642675124449" duration="23000" />
+      <workItem from="1642802821033" duration="3349000" />
     </task>
     <task id="LOCAL-00001" summary="maybe working, resolve output style">
       <created>1639085799698</created>
@@ -182,7 +162,49 @@
       <option name="project" value="LOCAL" />
       <updated>1639662631719</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="final work and readme">
+      <created>1640293143433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640293143433</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Recreated the input related classes, added strategies for giving gifts">
+      <created>1642541774745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642541774745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Solved checkstyle errors and reorganised files">
+      <created>1642543061972</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642543061972</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented the functionality, having some errors though">
+      <created>1642593074056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642593074056</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Working and no errors">
+      <created>1642595813792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642595813792</updated>
+    </task>
+    <task id="LOCAL-00012" summary="final edit">
+      <created>1642803411881</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642803411881</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +231,12 @@
     <MESSAGE value="no coding style error, make comments prettier later" />
     <MESSAGE value="final work" />
     <MESSAGE value="update: checker correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: checker correction" />
+    <MESSAGE value="final work and readme" />
+    <MESSAGE value="Recreated the input related classes, added strategies for giving gifts" />
+    <MESSAGE value="Solved checkstyle errors and reorganised files" />
+    <MESSAGE value="Implemented the functionality, having some errors though" />
+    <MESSAGE value="Working and no errors" />
+    <MESSAGE value="final edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final edit" />
   </component>
 </project>

@@ -2,10 +2,13 @@ package simulation;
 
 import common.Constants;
 import databases.Database;
+import enums.CityStrategyEnum;
 import objects.Child;
 import objects.ChildrenUpdate;
 import objects.Gift;
 import observers.SantaClausUpdate;
+import strategies.giftingStrategy.ChildSortingStrategy;
+import strategies.giftingStrategy.StrategyFactory;
 
 import java.util.Comparator;
 import java.util.List;
@@ -15,12 +18,14 @@ public final class YearData implements SantaClausUpdate {
     private List<Gift> yearGiftsList;
     private List<Child> yearGiftableChildren;
     private Double budgetUnit;
+    private CityStrategyEnum yearStrategy;
 
     public YearData(final Double yearBudget, final List<Gift> yearGiftsList,
                     final List<Child> yearGiftableChildren) {
         this.yearBudget = yearBudget;
         this.yearGiftsList = yearGiftsList;
         this.yearGiftableChildren = yearGiftableChildren;
+        this.yearStrategy = CityStrategyEnum.ID;
     }
 
     /**
@@ -90,6 +95,7 @@ public final class YearData implements SantaClausUpdate {
         for (ChildrenUpdate currUpdate : updates) {
             Child currChild = getChildById(currUpdate.getId());
             if (currChild != null) {
+                currChild.updateElf(currUpdate.getElf());
                 currChild.updateNiceScore(currUpdate.getNiceScore());
                 currChild.updateGiftsPreferences(currUpdate.getGiftsPreferences());
             }
@@ -107,7 +113,23 @@ public final class YearData implements SantaClausUpdate {
         }
     }
 
-    private Child getChildById(final Integer id) {
+    /**
+     * function that changes the strategy by which gifts
+     * are given to children
+     * @param strategy new strategy
+     */
+    @Override
+    public void updateStrategy(final CityStrategyEnum strategy) {
+        this.yearStrategy = strategy;
+    }
+
+    /**
+     * function that searches through the list of
+     * giftable children to find a certain kid
+     * @param id the id to look for
+     * @return child or null if it doesn't exist
+     */
+    public Child getChildById(final Integer id) {
         for (Child child : this.yearGiftableChildren) {
             if (child.getId().equals(id)) {
                 return child;
@@ -132,6 +154,15 @@ public final class YearData implements SantaClausUpdate {
         });
     }
 
+    /**
+     * Function that sorts the annual giftable children list
+     * by the strategy type received in that year
+     */
+    public void sortChildren() {
+        ChildSortingStrategy strategy = StrategyFactory.createChildSortingStrategy(this);
+        this.yearGiftableChildren = strategy.sortChildren();
+    }
+
     public Double getYearBudget() {
         return yearBudget;
     }
@@ -146,5 +177,29 @@ public final class YearData implements SantaClausUpdate {
 
     public Double getBudgetUnit() {
         return budgetUnit;
+    }
+
+    public void setYearBudget(final Double yearBudget) {
+        this.yearBudget = yearBudget;
+    }
+
+    public void setYearGiftsList(final List<Gift> yearGiftsList) {
+        this.yearGiftsList = yearGiftsList;
+    }
+
+    public void setYearGiftableChildren(final List<Child> yearGiftableChildren) {
+        this.yearGiftableChildren = yearGiftableChildren;
+    }
+
+    public void setBudgetUnit(final Double budgetUnit) {
+        this.budgetUnit = budgetUnit;
+    }
+
+    public CityStrategyEnum getYearStrategy() {
+        return yearStrategy;
+    }
+
+    public void setYearStrategy(final CityStrategyEnum yearStrategy) {
+        this.yearStrategy = yearStrategy;
     }
 }

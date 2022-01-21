@@ -3,6 +3,8 @@ package fileio.input;
 import common.Constants;
 import enums.Category;
 import enums.Cities;
+import enums.CityStrategyEnum;
+import enums.ElvesType;
 import fileio.inputdata.AnnualChangesInputData;
 import fileio.inputdata.ChildInputData;
 import fileio.inputdata.ChildrenUpdateInputData;
@@ -40,7 +42,9 @@ public final class InputLoader {
                     jsonGift).get(Constants.PRICE))).doubleValue();
             Category category = Utils.stringToCategory((String)
                     ((JSONObject) jsonGift).get(Constants.CATEGORY));
-            giftList.add(new GiftsInputData(productName, price, category));
+            Integer quantity = ((Number) (((JSONObject)
+                    jsonGift).get(Constants.QUANTITY))).intValue();
+            giftList.add(new GiftsInputData(productName, price, category, quantity));
         }
     }
 
@@ -57,8 +61,12 @@ public final class InputLoader {
                     (((JSONObject) jsonChild).get(Constants.NICESCORE))).doubleValue();
             List<Category> giftsPreferences = Utils.convertJSONArraytoCategory((JSONArray)
                     ((JSONObject) jsonChild).get(Constants.GIFTPREFERENCES));
+            Double niceScoreBonus = ((Number)
+                    (((JSONObject) jsonChild).get(Constants.NICESCOREBONUS))).doubleValue();
+            ElvesType elf = Utils.stringToElves((String)
+                    ((JSONObject) jsonChild).get(Constants.ELF));
             childrenList.add(new ChildInputData(id, lastname, firstname,
-                    age, city, niceScore, giftsPreferences));
+                    age, city, niceScore, giftsPreferences, niceScoreBonus, elf));
         }
     }
 
@@ -108,6 +116,8 @@ public final class InputLoader {
                             jsonChange).get(Constants.NEWCHILDREN);
                     JSONArray jsonNewChildrenUpdate = (JSONArray) ((JSONObject)
                             jsonChange).get(Constants.CHILDRENUPDATES);
+                    CityStrategyEnum newStrategy = Utils.stringToStrategy((String)
+                            ((JSONObject) jsonChange).get(Constants.STRATEGY));
                     List<GiftsInputData> newGiftsList = new ArrayList<>();
                     List<ChildInputData> newChildrenList = new ArrayList<>();
                     List<ChildrenUpdateInputData> newChildrenUpdateList = new ArrayList<>();
@@ -141,14 +151,16 @@ public final class InputLoader {
                             List<Category> giftsPreferences =
                                     Utils.convertJSONArraytoCategory((JSONArray) ((JSONObject)
                                             newChildrenUpdate).get(Constants.GIFTPREFERENCES));
+                            ElvesType elf = Utils.stringToElves((String)
+                                    ((JSONObject) newChildrenUpdate).get(Constants.ELF));
                             newChildrenUpdateList.add(new
-                                    ChildrenUpdateInputData(id, niceScore, giftsPreferences));
+                                    ChildrenUpdateInputData(id, niceScore, giftsPreferences, elf));
                         }
                     } else {
                         newChildrenUpdateList = null;
                     }
                     annualChanges.add(new AnnualChangesInputData(newSantaBudget,
-                            newGiftsList, newChildrenList, newChildrenUpdateList));
+                            newGiftsList, newChildrenList, newChildrenUpdateList, newStrategy));
                 }
             }
 

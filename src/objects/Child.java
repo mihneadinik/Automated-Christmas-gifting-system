@@ -3,9 +3,10 @@ package objects;
 import common.Constants;
 import enums.Category;
 import enums.Cities;
+import enums.ElvesType;
 import observers.ChildUpdate;
-import strategies.AverageScoreStrategy;
-import strategies.StrategyFactory;
+import strategies.averageScoreStrategy.AverageScoreStrategy;
+import strategies.averageScoreStrategy.StrategyFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,8 @@ public final class Child implements ChildUpdate {
     private Cities city;
     private Double niceScore;
     private List<Category> giftsPreference;
+    private Double niceScoreBonus;
+    private ElvesType elf;
 
     private List<Double> scoreHistory = new ArrayList<>();
     private String type;
@@ -27,7 +30,8 @@ public final class Child implements ChildUpdate {
 
     public Child(final Integer id, final String lastname, final String firstname,
                  final Integer age, final Cities city, final Double niceScore,
-                 final List<Category> giftsPreference) {
+                 final List<Category> giftsPreference,
+                 final Double niceScoreBonus, final ElvesType elf) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -40,6 +44,8 @@ public final class Child implements ChildUpdate {
         this.averageScore = 0.0;
         this.santaBudget = 0.0;
         this.receivedGifts = null;
+        this.niceScoreBonus = niceScoreBonus;
+        this.elf = elf;
         computeType();
         computeAverageScore();
     }
@@ -57,6 +63,8 @@ public final class Child implements ChildUpdate {
         this.averageScore = otherChild.getAverageScore();
         this.santaBudget = otherChild.getSantaBudget();
         this.receivedGifts = otherChild.getReceivedGifts();
+        this.niceScoreBonus = otherChild.getNiceScoreBonus();
+        this.elf = otherChild.getElf();
     }
 
     /**
@@ -115,12 +123,34 @@ public final class Child implements ChildUpdate {
         AverageScoreStrategy strategy = StrategyFactory.createAverageScoreStrategy(this);
         if (strategy != null) {
             this.averageScore = strategy.computeAverageScore();
+            this.averageScore += this.averageScore * this.niceScoreBonus / Constants.HUNDRED;
+            if (this.averageScore > Constants.AVERAGESCOREBOUND) {
+                this.averageScore = Constants.AVERAGESCOREBOUND;
+            }
         }
     }
 
+    /**
+     * function that computes the assigned budget
+     * for each child annually
+     */
     @Override
     public void updateSantaBudget(final Double budgetUnit) {
         this.santaBudget = budgetUnit * this.averageScore;
+        if (this.elf.equals(ElvesType.BLACK)) {
+            this.santaBudget -= this.santaBudget * Constants.ELFVALUE / Constants.HUNDRED;
+        }
+        if (this.elf.equals(ElvesType.PINK)) {
+            this.santaBudget += this.santaBudget * Constants.ELFVALUE / Constants.HUNDRED;
+        }
+    }
+
+    /**
+     * function that changes the elf of a child annually
+     */
+    @Override
+    public void updateElf(final ElvesType newElf) {
+        this.elf = newElf;
     }
 
     private void computeType() {
@@ -233,5 +263,21 @@ public final class Child implements ChildUpdate {
 
     public void setReceivedGifts(final List<Gift> receivedGifts) {
         this.receivedGifts = receivedGifts;
+    }
+
+    public Double getNiceScoreBonus() {
+        return niceScoreBonus;
+    }
+
+    public void setNiceScoreBonus(final Double niceScoreBonus) {
+        this.niceScoreBonus = niceScoreBonus;
+    }
+
+    public ElvesType getElf() {
+        return elf;
+    }
+
+    public void setElf(final ElvesType elf) {
+        this.elf = elf;
     }
 }

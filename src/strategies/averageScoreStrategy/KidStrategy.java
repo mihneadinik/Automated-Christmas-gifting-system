@@ -1,4 +1,4 @@
-package strategies;
+package strategies.averageScoreStrategy;
 
 import objects.Child;
 

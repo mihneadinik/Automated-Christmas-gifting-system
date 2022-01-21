@@ -3,6 +3,8 @@ package utils;
 import common.Constants;
 import enums.Category;
 import enums.Cities;
+import enums.CityStrategyEnum;
+import enums.ElvesType;
 import fileio.inputdata.ChildInputData;
 import fileio.inputdata.ChildrenUpdateInputData;
 import fileio.inputdata.GiftsInputData;
@@ -30,7 +32,8 @@ public final class Utils {
         List<Gift> outList = new ArrayList<>();
 
         for (GiftsInputData data : list) {
-            outList.add(new Gift(data.getProductName(), data.getPrice(), data.getCategory()));
+            outList.add(new Gift(data.getProductName(), data.getPrice(),
+                    data.getCategory(), data.getQuantity()));
         }
 
         return outList;
@@ -48,7 +51,7 @@ public final class Utils {
         for (ChildInputData data : list) {
             outList.add(new Child(data.getId(), data.getLastname(), data.getFirstname(),
                     data.getAge(), data.getCity(), data.getNiceScore(),
-                    data.getGiftsPreference()));
+                    data.getGiftsPreference(), data.getNiceScoreBonus(), data.getElf()));
         }
 
         return outList;
@@ -66,7 +69,7 @@ public final class Utils {
 
         for (ChildrenUpdateInputData data : list) {
             outList.add(new ChildrenUpdate(data.getId(), data.getNiceScore(),
-                    data.getGiftsPreferences()));
+                    data.getGiftsPreferences(), data.getElf()));
         }
 
         return outList;
@@ -90,6 +93,37 @@ public final class Utils {
             case "brasov" -> Cities.BRASOV;
             case "braila" -> Cities.BRAILA;
             case "oradea" -> Cities.ORADEA;
+            default -> null;
+        };
+    }
+
+    /**
+     * function that converts a string with the name
+     * of an elf to its enum correspondent
+     * @param elf String with the name of an elf
+     * @return the elf enum item
+     */
+    public static ElvesType stringToElves(final String elf) {
+        return switch (elf.toLowerCase()) {
+            case "yellow" -> ElvesType.YELLOW;
+            case "black" -> ElvesType.BLACK;
+            case "pink" -> ElvesType.PINK;
+            case "white" -> ElvesType.WHITE;
+            default -> null;
+        };
+    }
+
+    /**
+     * function that converts a string with the name
+     * of a strategy to its enum correspondent
+     * @param strategy String with the name of a strategy
+     * @return the strategy enum item
+     */
+    public static CityStrategyEnum stringToStrategy(final String strategy) {
+        return switch (strategy.toLowerCase()) {
+            case "nicescorecity" -> CityStrategyEnum.NICE_SCORE_CITY;
+            case "id" -> CityStrategyEnum.ID;
+            case "nicescore" -> CityStrategyEnum.NICE_SCORE;
             default -> null;
         };
     }

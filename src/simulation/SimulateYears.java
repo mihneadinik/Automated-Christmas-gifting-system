@@ -30,6 +30,7 @@ public final class SimulateYears {
         this.currYear.computeBudget();
         this.currYear.updateBudgetForChildren();
         this.currYear.sortGiftList();
+//        this.currYear.sortChildren();
         SolveYear.giveGifts(currYear, arrayResult);
     }
 
@@ -58,6 +59,10 @@ public final class SimulateYears {
         this.currYear.applyChildrenUpdate(currChange.getChildrenUpdate());
         // update the budget
         this.currYear.updateBudget(currChange.getNewSantaBudget());
+        // update year's strategy
+        this.currYear.updateStrategy(currChange.getStrategy());
+        // sort the children before giving gifts
+        this.currYear.sortChildren();
     }
 
     private void updateChildrenAge() {
