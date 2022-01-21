@@ -1,7 +1,6 @@
 package databases;
 
 import common.Constants;
-import enums.Cities;
 import fileio.inputdata.AnnualChangesInputData;
 import fileio.inputdata.ChildInputData;
 import fileio.inputdata.GiftsInputData;
@@ -20,7 +19,6 @@ public final class Database {
     private Double santaBudget;
     private List<Child> childrenList;
     private List<Gift> giftsList;
-    private List<Cities> citiesList;
     private List<AnnualChange> annualChangeList;
 
     private Database() {
@@ -28,7 +26,6 @@ public final class Database {
         this.santaBudget = null;
         this.childrenList = new ArrayList<>();
         this.giftsList = new ArrayList<>();
-        this.citiesList = new ArrayList<>();
         this.annualChangeList = new ArrayList<>();
     }
 
@@ -105,9 +102,6 @@ public final class Database {
         return giftsList;
     }
 
-    public List<Cities> getCitiesList() {
-        return citiesList;
-    }
 
     public List<AnnualChange> getAnnualChangeList() {
         return annualChangeList;
@@ -143,7 +137,6 @@ public final class Database {
         this.santaBudget = null;
         this.childrenList.clear();
         this.giftsList.clear();
-        this.citiesList.clear();
         this.annualChangeList.clear();
     }
 }

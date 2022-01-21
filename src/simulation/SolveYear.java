@@ -28,7 +28,6 @@ public final class SolveYear {
             // solve
             List<Gift> receivedGifts = new ArrayList<>();
             Double childBudget = child.getSantaBudget();
-
             // while the child has money for gifts
             // check if Santa has the required gift
             for (Category preference : child.getGiftsPreference()) {
